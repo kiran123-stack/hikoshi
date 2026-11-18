@@ -934,8 +934,8 @@ img {
 /* 4-Card Grid */
 .eduact-services-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 24px;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 18px;
     position: relative;
     z-index: 2;
 }
@@ -1101,6 +1101,83 @@ img {
     color: var(--theme-body);
     line-height: 1.6;
     margin: 0;
+}
+
+/* -- Approach Limits Highlight Box (Color Spread & Clean Border, No Left Highlight Stripe) -- */
+.approach-limits-highlight {
+    max-width: 980px;
+    margin: 40px auto 0;
+    position: relative;
+    padding: 0 16px;
+    box-sizing: border-box;
+}
+
+.limits-highlight-card {
+    background: linear-gradient(135deg, #f0f4ff 0%, #fff7f0 50%, #f4f6fc 100%);
+    border: 1.5px solid rgba(43, 57, 144, 0.16);
+    border-radius: 16px;
+    padding: 24px 30px;
+    box-shadow: 0 4px 18px rgba(43, 57, 144, 0.05);
+    color: var(--theme-body);
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.limits-highlight-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(43, 57, 144, 0.09);
+    border-color: rgba(43, 57, 144, 0.28);
+}
+
+.limits-card-content {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.limits-header-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.limits-pill-badge {
+    font-family: var(--font-body);
+    font-size: 11px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--theme-orange);
+    background: rgba(255, 107, 0, 0.1);
+    padding: 4px 10px;
+    border-radius: 20px;
+}
+
+.limits-heading {
+    font-family: var(--font-heading);
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--theme-heading);
+    margin: 0;
+    line-height: 1.3;
+}
+
+.limits-desc {
+    font-family: var(--font-body);
+    font-size: 14.5px;
+    line-height: 1.65;
+    color: var(--theme-body);
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .limits-highlight-card {
+        padding: 20px 20px;
+    }
+    .limits-heading {
+        font-size: 18px;
+    }
 }
 
 /* ==========================================================================
@@ -1309,7 +1386,8 @@ input:focus, select:focus, textarea:focus {
     }
     
     .eduact-services-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 20px;
     }
 }
 
@@ -1443,6 +1521,687 @@ input:focus, select:focus, textarea:focus {
     margin-top: 18px;
 }
 
+/* ── Migration Overview Grid (Country-by-Country on Home/Migration view) ── */
+.migration-overview-section {
+    padding: 85px 0 95px;
+    background: #fafbfe;
+    position: relative;
+    border-top: 1px solid rgba(232, 236, 244, 0.6);
+    border-bottom: 1px solid rgba(232, 236, 244, 0.6);
+}
+
+.migration-overview-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.migration-country-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+    margin-bottom: 40px;
+}
+
+.migration-country-card {
+    background: #ffffff;
+    border-radius: 18px;
+    padding: 0 26px 32px;
+    box-shadow: var(--theme-shadow-md);
+    border: 1px solid rgba(232, 236, 244, 0.85);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.migration-country-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--theme-shadow-lg);
+    border-color: var(--theme-orange);
+}
+
+/* ── Clippath Highlight Badge (Top Shape for Country Card) ── */
+.card-clippath-top {
+    width: 94px;
+    height: 52px;
+    background: linear-gradient(135deg, var(--theme-orange) 0%, #ff8c33 100%);
+    clip-path: polygon(0 0, 100% 0, 84% 100%, 16% 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    margin-bottom: 22px;
+    filter: drop-shadow(0 4px 10px rgba(255, 107, 0, 0.28));
+    transition: transform 0.25s ease, filter 0.25s ease;
+}
+
+.migration-country-card:hover .card-clippath-top {
+    transform: scale(1.06);
+}
+
+.clippath-badge-num {
+    font-family: var(--font-heading);
+    font-size: 19px;
+    font-weight: 800;
+    color: #ffffff;
+    letter-spacing: 0.05em;
+    padding-bottom: 3px;
+}
+
+.migration-route-tag {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    line-height: 1.4;
+    margin-bottom: 12px;
+    min-height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.migration-country-card:nth-child(1) .card-clippath-top {
+    background: linear-gradient(135deg, #ff6b00 0%, #ff8c33 100%);
+    filter: drop-shadow(0 4px 10px rgba(255, 107, 0, 0.3));
+}
+.migration-country-card:nth-child(1) .migration-route-tag {
+    color: var(--theme-orange);
+}
+.migration-country-card:nth-child(1):hover {
+    border-color: var(--theme-orange);
+}
+
+.migration-country-card:nth-child(2) .card-clippath-top {
+    background: linear-gradient(135deg, #2b3990 0%, #3e4eb5 100%);
+    filter: drop-shadow(0 4px 10px rgba(43, 57, 144, 0.3));
+}
+.migration-country-card:nth-child(2) .migration-route-tag {
+    color: var(--theme-blue);
+}
+.migration-country-card:nth-child(2):hover {
+    border-color: var(--theme-blue);
+}
+
+.migration-country-card:nth-child(3) .card-clippath-top {
+    background: linear-gradient(135deg, #0096c7 0%, #00b4d8 100%);
+    filter: drop-shadow(0 4px 10px rgba(0, 180, 216, 0.3));
+}
+.migration-country-card:nth-child(3) .migration-route-tag {
+    color: #0096c7;
+}
+.migration-country-card:nth-child(3):hover {
+    border-color: #00b4d8;
+}
+
+.migration-country-card h3 {
+    font-family: var(--font-heading);
+    font-size: 24px;
+    font-weight: 800;
+    color: var(--theme-heading);
+    margin: 0 0 12px;
+    line-height: 1.25;
+}
+
+.migration-country-card p {
+    font-size: 14px;
+    color: var(--theme-body);
+    line-height: 1.68;
+    margin: 0 0 24px;
+    flex-grow: 1;
+}
+
+.migration-card-footer {
+    margin-top: auto;
+    padding-top: 14px;
+    border-top: 1px solid rgba(232, 236, 244, 0.75);
+    width: 100%;
+}
+
+.migration-overview-container .file-callout {
+    background: #ffffff;
+    border: 1px solid var(--theme-border);
+    border-left: 4px solid var(--theme-orange);
+    border-radius: 12px;
+    padding: 18px 24px;
+    box-shadow: var(--theme-shadow-sm);
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.migration-overview-container .file-strong {
+    color: var(--theme-heading);
+    font-size: 14.5px;
+    font-weight: 800;
+}
+
+.migration-overview-container .file-callout-text {
+    color: var(--theme-body);
+    font-size: 13.5px;
+    line-height: 1.6;
+}
+
+@media (max-width: 992px) {
+    .migration-country-cards {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+}
+
+@media (max-width: 680px) {
+    .migration-country-cards {
+        grid-template-columns: 1fr;
+    }
+    .migration-overview-section {
+        padding: 60px 0;
+    }
+}
+
+/* ==========================================================================
+   COUNTRY DETAIL SUBPAGES (#australia, #canada, #new-zealand)
+   ========================================================================== */
+.country-detail-container {
+    width: 100%;
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 36px 0 80px;
+    box-sizing: border-box;
+}
+
+/* ── Top Navigation Bar ── */
+.country-nav-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 32px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--theme-border);
+}
+
+.back-pill-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--theme-bg-light);
+    color: var(--theme-heading);
+    border: 1px solid var(--theme-border);
+    padding: 8px 18px;
+    border-radius: 50px;
+    font-size: 13.5px;
+    font-weight: 700;
+    transition: all 0.2s ease;
+    text-decoration: none;
+}
+
+.back-pill-btn:hover {
+    background: var(--theme-blue);
+    color: #ffffff;
+    border-color: var(--theme-blue);
+    transform: translateX(-3px);
+}
+
+.country-badge-pill {
+    font-size: 11px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--theme-orange);
+    background: var(--theme-orange-light);
+    padding: 6px 14px;
+    border-radius: 50px;
+}
+
+/* ── Page Header ── */
+.country-page-header {
+    margin-bottom: 32px;
+}
+
+.country-page-title {
+    font-family: var(--font-heading);
+    font-size: 42px;
+    font-weight: 800;
+    color: var(--theme-heading);
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    margin: 8px 0 14px;
+}
+
+.country-page-intro {
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 1.75;
+    color: var(--theme-body);
+    max-width: 820px;
+    margin: 0;
+}
+
+/* ── Notice / Disclaimer Banner ── */
+.country-notice-banner {
+    background: var(--theme-blue-light);
+    border-left: 4px solid var(--theme-blue);
+    border-radius: 14px;
+    padding: 20px 24px;
+    margin-bottom: 48px;
+    box-shadow: var(--theme-shadow-sm);
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.notice-badge-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--theme-blue);
+}
+
+.country-notice-banner p {
+    font-family: var(--font-body);
+    font-size: 14px;
+    line-height: 1.65;
+    color: var(--theme-heading);
+    margin: 0;
+}
+
+/* ── Section Block ── */
+.country-section-block {
+    margin-bottom: 56px;
+}
+
+.country-block-head {
+    margin-bottom: 28px;
+}
+
+.country-block-head h2 {
+    font-family: var(--font-heading);
+    font-size: 28px;
+    font-weight: 800;
+    color: var(--theme-heading);
+    margin: 4px 0 8px;
+    letter-spacing: -0.01em;
+}
+
+.country-block-head p {
+    font-family: var(--font-body);
+    font-size: 14.5px;
+    color: var(--theme-muted);
+    margin: 0;
+}
+
+/* ── Pathways Grid & Cards ── */
+.country-pathways-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 22px;
+}
+
+.pathway-detail-card {
+    background: #ffffff;
+    border-radius: 18px;
+    padding: 26px 24px 28px;
+    box-shadow: var(--theme-shadow-md);
+    border: 1px solid rgba(232, 236, 244, 0.85);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.pathway-detail-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--theme-shadow-lg);
+    border-color: var(--theme-orange);
+}
+
+.pathway-card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 14px;
+}
+
+.pathway-badge-num {
+    background: var(--theme-orange-light);
+    color: var(--theme-orange);
+    font-family: var(--font-heading);
+    font-size: 14px;
+    font-weight: 800;
+    padding: 3px 12px;
+    border-radius: 50px;
+    letter-spacing: 0.04em;
+}
+
+.pathway-card-country {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--theme-muted);
+}
+
+.pathway-detail-card h3 {
+    font-family: var(--font-heading);
+    font-size: 20px;
+    font-weight: 800;
+    color: var(--theme-heading);
+    line-height: 1.35;
+    margin: 0 0 10px;
+}
+
+.pathway-detail-card p {
+    font-family: var(--font-body);
+    font-size: 14px;
+    line-height: 1.65;
+    color: var(--theme-body);
+    margin: 0;
+    flex-grow: 1;
+}
+
+/* ── Checklist / Documents Gathering Grid ── */
+.checklist-pill-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 16px;
+}
+
+.checklist-pill-item {
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 18px 20px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    border: 1px solid var(--theme-border);
+    box-shadow: var(--theme-shadow-sm);
+    transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.checklist-pill-item:hover {
+    transform: translateY(-3px);
+    border-color: var(--theme-orange);
+    box-shadow: var(--theme-shadow-md);
+}
+
+.checklist-pill-icon {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: var(--theme-orange);
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.checklist-pill-item span {
+    font-family: var(--font-body);
+    font-size: 14.5px;
+    font-weight: 600;
+    color: var(--theme-heading);
+    line-height: 1.4;
+}
+
+/* ── Legal / Compliance Advice Box ── */
+.country-compliance-card {
+    background: linear-gradient(135deg, #ffffff 0%, #fffbf8 100%);
+    border: 1.5px solid rgba(255, 107, 0, 0.25);
+    border-radius: 18px;
+    padding: 28px 32px;
+    box-shadow: 0 8px 25px rgba(255, 107, 0, 0.07);
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    margin-bottom: 56px;
+}
+
+.compliance-card-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    background: var(--theme-orange-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.compliance-card-body h3 {
+    font-family: var(--font-heading);
+    font-size: 20px;
+    font-weight: 800;
+    color: var(--theme-heading);
+    margin: 0 0 8px;
+}
+
+.compliance-card-body p {
+    font-family: var(--font-body);
+    font-size: 14px;
+    line-height: 1.7;
+    color: var(--theme-body);
+    margin: 0;
+}
+
+/* ── Official Source Links Grid ── */
+.official-links-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 16px;
+}
+
+.official-source-link {
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 16px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid var(--theme-border);
+    box-shadow: var(--theme-shadow-sm);
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.official-source-link:hover {
+    border-color: var(--theme-blue);
+    box-shadow: var(--theme-shadow-md);
+    transform: translateY(-3px);
+}
+
+.official-link-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.official-link-icon-chip {
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    background: var(--theme-blue-light);
+    color: var(--theme-blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-size: 16px;
+}
+
+.official-link-title {
+    font-family: var(--font-body);
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--theme-heading);
+    line-height: 1.4;
+    transition: color 0.2s;
+}
+
+.official-source-link:hover .official-link-title {
+    color: var(--theme-blue);
+}
+
+.official-link-arrow {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: var(--theme-bg-light);
+    color: var(--theme-muted);
+    font-size: 13px;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: all 0.2s;
+}
+
+.official-source-link:hover .official-link-arrow {
+    background: var(--theme-blue);
+    color: #ffffff;
+    transform: translateX(2px) translateY(-2px);
+}
+
+/* ── Bottom Call To Action Banner ── */
+.country-bottom-cta {
+    background: linear-gradient(135deg, #171d37 0%, #2b3990 100%);
+    color: #ffffff;
+    border-radius: 20px;
+    padding: 44px 32px;
+    text-align: center;
+    box-shadow: var(--theme-shadow-lg);
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-badge-pill {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.15);
+    color: #ffffff;
+    font-size: 11px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    padding: 4px 14px;
+    border-radius: 50px;
+    margin-bottom: 12px;
+}
+
+.country-bottom-cta h2 {
+    font-family: var(--font-heading);
+    font-size: 32px;
+    font-weight: 800;
+    color: #ffffff;
+    margin: 0 0 10px;
+    letter-spacing: -0.01em;
+}
+
+.country-bottom-cta p {
+    font-family: var(--font-body);
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.85);
+    margin: 0 0 24px;
+}
+
+.cta-actions-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-bottom: 14px;
+}
+
+.cta-disclaimer-note {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.6) !important;
+    margin: 0 !important;
+}
+
+@media (max-width: 768px) {
+    .country-page-title {
+        font-size: 32px;
+    }
+    .country-compliance-card {
+        flex-direction: column;
+        padding: 24px 20px;
+    }
+    .country-bottom-cta {
+        padding: 36px 20px;
+    }
+    .country-bottom-cta h2 {
+        font-size: 26px;
+    }
+}
+
+/* ── Pathway Services Grid (inside Australia / Canada / NZ detail pages) ── */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 18px;
+    margin: 20px 0 32px;
+}
+
+.service {
+    background: #ffffff;
+    border: 1px solid var(--theme-border);
+    border-radius: 12px;
+    padding: 20px 18px 16px;
+    box-shadow: var(--theme-shadow-sm);
+}
+
+.service h3 {
+    font-family: var(--font-heading);
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--theme-heading);
+    margin: 10px 0 8px;
+}
+
+.service p {
+    color: var(--theme-body);
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.service-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 12px;
+    color: var(--theme-muted);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 2px;
+}
+
+.service-top span:first-child {
+    color: var(--theme-orange);
+    font-size: 15px;
+    font-weight: 800;
+}
+
+/* ── Section intro text ── */
+.section-intro {
+    color: var(--theme-body);
+    line-height: 1.7;
+    margin: 0 0 20px;
+}
+
 /* ── Country Specific Sub-Sections (#australia, #canada, #new-zealand) ── */
 .country-sub {
     font-family: var(--font-heading);
@@ -1546,6 +2305,7 @@ input:focus, select:focus, textarea:focus {
 .file-strong {
     font-weight: 700;
     color: var(--theme-heading);
+    margin-right: 6px;
 }
 
 .file-closing {

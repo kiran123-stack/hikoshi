@@ -107,7 +107,7 @@
         <!-- ══════════════════════════════════════════════════════════════════
              HERO SECTION (EduAct Playful Creative Split Layout)
              ══════════════════════════════════════════════════════════════════ -->
-        <section class="hero" data-views="home">
+        <section id="home" class="hero" data-views="home">
             <div class="hero-copy">
 
                <!-- <div class="hero-tag">
@@ -166,9 +166,9 @@
         </section>
 
         <!-- ══════════════════════════════════════════════════════════════════
-             "ABOUT US" & MIGRATION PATHWAYS (Collage + Orange Box + Features)
+             "ABOUT US" SECTION (Collage + Orange Box + Features)
              ══════════════════════════════════════════════════════════════════ -->
-        <section id="migration" class="about-section" data-views="home migration">
+        <section id="about" class="about-section" data-views="home">
             <div class="about-grid">
                 <!-- Left: Circular Collage with Floating Badges -->
                 <div class="collage-container">
@@ -234,13 +234,75 @@
 
                     <!-- Country Quick Navigation -->
                     <div class="country-pills">
-                        <a href="#migration" class="country-pill">🇦🇺 Australia Migration &amp; Study</a>
+                        <a href="#australia" class="country-pill">🇦🇺 Australia Migration &amp; Study</a>
                         <a href="#canada" class="country-pill">🇨🇦 Canada Express Entry &amp; PNP</a>
                         <a href="#new-zealand" class="country-pill">🇳🇿 New Zealand Pathways</a>
                     </div>
 
                     <a href="#enquiry" class="btn-blue">Start a free enquiry <span aria-hidden="true">→</span></a>
                 </div>
+            </div>
+        </section>
+
+        <!-- ══════════════════════════════════════════════════════════════════
+             MIGRATION (Country-by-Country 3-Card Grid with Clippath Highlight)
+             ══════════════════════════════════════════════════════════════════ -->
+        <section id="migration" class="migration-overview-section" data-views="home migration">
+            <div class="migration-overview-container">
+                <div class="section-head-center">
+                    <div class="section-eyebrow">
+                        <span>Migration</span>
+                        <span class="stars">★★★★</span>
+                    </div>
+                    <h2>Migration, country by country</h2>
+                    <p class="section-intro">Each country sets its own visa types, forms and rules, and each regulates who may advise. Start here, then open the country you are considering. These pages are general information, not immigration advice, and migration support is not open yet.</p>
+                </div>
+
+                <div class="migration-country-cards">
+                    <!-- Card 1: Australia -->
+                    <article class="migration-country-card">
+                        <div class="card-clippath-top">
+                            <span class="clippath-badge-num">01</span>
+                        </div>
+                        <div class="migration-route-tag">Skilled, employer and family routes</div>
+                        <h3>Australia</h3>
+                        <p>Australia runs most skilled migration through an online expression of interest. This page lists the main pathways to explore and where to confirm the rules.</p>
+                        <div class="migration-card-footer">
+                            <a href="#australia" class="card-read-more">See Australia pathways <span aria-hidden="true">↗</span></a>
+                        </div>
+                    </article>
+
+                    <!-- Card 2: Canada -->
+                    <article class="migration-country-card">
+                        <div class="card-clippath-top">
+                            <span class="clippath-badge-num">02</span>
+                        </div>
+                        <div class="migration-route-tag">Express Entry, provincial and other routes</div>
+                        <h3>Canada</h3>
+                        <p>Canada offers federal and provincial routes to permanent residence. This page lists the main ones to explore and where to confirm the rules.</p>
+                        <div class="migration-card-footer">
+                            <a href="#canada" class="card-read-more">See Canada pathways <span aria-hidden="true">↗</span></a>
+                        </div>
+                    </article>
+
+                    <!-- Card 3: New Zealand -->
+                    <article class="migration-country-card">
+                        <div class="card-clippath-top">
+                            <span class="clippath-badge-num">03</span>
+                        </div>
+                        <div class="migration-route-tag">Skilled, employer and student routes</div>
+                        <h3>New Zealand</h3>
+                        <p>New Zealand uses invitation-based skilled residence alongside employer-linked work visas. This page lists the main routes to explore and where to confirm the rules.</p>
+                        <div class="migration-card-footer">
+                            <a href="#new-zealand" class="card-read-more">See New Zealand pathways <span aria-hidden="true">↗</span></a>
+                        </div>
+                    </article>
+                </div>
+
+                <aside class="file-callout file-bar" data-tone="note">
+                    <span class="file-strong">Planned, not yet available</span>
+                    <span class="file-callout-text">Regulated immigration advice will only be given by registered or licensed professionals in each country, engaged before launch. Until then, this site does not give immigration advice or accept migration applications.</span>
+                </aside>
             </div>
         </section>
 
@@ -290,16 +352,28 @@
                     <a href="#enquiry" class="card-read-more">Enquire Now<span aria-hidden="true">→</span></a>
                 </div>
 
-                <!-- Card 4: Visas & Citizenship -->
+                <!-- Card 4: Tourist Visas & Travel -->
                 <div class="eduact-card">
                     <div class="card-arch-top">
                         <svg viewBox="0 0 24 24"><path d="M21 16V14L13 9V3.5C13 2.67 12.33 2 11.5 2C10.67 2 10 2.67 10 3.5V9L2 14V16L10 13.5V19L8 20.5V22L11.5 21L15 22V20.5L13 19V13.5L21 16Z"/></svg>
                     </div>
-                    <h3>Tourist Visas &amp; Citizenship</h3>
-                    <p>Visit visa processing, tailored flight and accommodation packages, plus second residency and citizenship advisory.</p>
+                    <h3>Tourist Visas &amp; Travel Packages</h3>
+                    <p>Tourist-visa document checklists, application-file preparation, plus custom travel-package enquiries for Dubai and destinations worldwide.</p>
+                    <a href="#enquiry" class="card-read-more">Enquire Now<span aria-hidden="true">→</span></a>
+                </div>
+
+                <!-- Card 5: Second Citizenship & Residency -->
+                <div class="eduact-card">
+                    <div class="card-arch-top">
+                        <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
+                    </div>
+                    <h3>Second Citizenship &amp; Residency</h3>
+                    <p>Enquiry and application support for citizenship- and residency-by-investment programs, for people planning greater travel freedom or a second base.</p>
                     <a href="#enquiry" class="card-read-more">Enquire Now<span aria-hidden="true">→</span></a>
                 </div>
             </div>
+
+          
 
             <!-- Bottom Orange Wave Accent Banner -->
             <div class="services-orange-band"></div>
@@ -334,6 +408,20 @@
                     <h3>Move step by step</h3>
                     <p>One fee stage at a time. Clear milestones. Regular updates until your outcome is decided.</p>
                 </div>
+            </div>
+
+            <!-- Help with limits stated up front -->
+            <div class="approach-limits-highlight">
+                <div class="limits-highlight-card">
+                    <div class="limits-card-content">
+                        <div class="limits-header-row">
+                            <span class="limits-pill-badge">Notice</span>
+                            <h3 class="limits-heading">Help with limits stated up front</h3>
+                        </div>
+                        <p class="limits-desc">Hikoshi is being set up as an assistance service. It is not a shortcut to any result. We do not promise jobs, visas, admissions or sponsorship.</p>
+                    </div>
+                </div>
+            </div>
             </div>
         </section>
         <!-- ══════════════════════════════════════════════════════════════════
@@ -623,51 +711,210 @@
                 </div>
             </div>
         </section>
-        <section id="canada" data-views="canada" style="display:none">
-            <section class="file-group" aria-labelledby=":R1a:">
-                <hgroup class="file-group-head">
-                    <p class="file-group-label">Migration</p>
-                    <h2 id=":R1a:" class="file-group-heading">Migrating to Canada</h2>
-                </hgroup>
-                <p class="small"><a href="#migration">← All migration pages</a></p>
-                <p class="section-intro">Canada offers federal and provincial routes to permanent residence. This page
-                    lists the main ones to explore and where to confirm the rules.</p>
-                <aside class="file-callout file-bar" data-tone="note"><span class="file-strong">General information
-                        only</span><span>This page is not immigration advice and Hikoshi does not offer migration
-                        services yet. Rules and fees change, so confirm each requirement with the official source below
-                        before you act.</span></aside>
-                <h3 class="country-sub">Main pathways to explore</h3>
-                <div class="services-grid">
-                    <article class="service">
-                        <div class="service-top"><span>01</span><span>Canada</span></div>
-                        <h3>Express Entry</h3>
-                        <p>An online system the government uses to manage skilled-worker applications. It covers three
-                            programs: Canadian Experience Class, Federal Skilled Worker and Federal Skilled Trades.</p>
-                    </article>
-                    <article class="service">
-                        <div class="service-top"><span>02</span><span>Canada</span></div>
-                        <h3>Canadian Experience Class</h3>
-                        <p>For skilled workers who already have eligible Canadian work experience.</p>
-                    </article>
-                    <article class="service">
-                        <div class="service-top"><span>03</span><span>Canada</span></div>
-                        <h3>Federal Skilled Worker and Federal Skilled Trades</h3>
-                        <p>For skilled workers with foreign or Canadian experience, and for people qualified in a
-                            skilled trade.</p>
-                    </article>
-                    <article class="service">
-                        <div class="service-top"><span>04</span><span>Canada</span></div>
-                        <h3>Provincial Nominee Program</h3>
-                        <p>Provinces and territories nominate people whose skills and experience suit their economy and
-                            who want to live there. Some streams link to Express Entry.</p>
-                    </article>
-                    <article class="service">
-                        <div class="service-top"><span>05</span><span>Canada</span></div>
-                        <h3>Work, study, family and visitor routes</h3>
-                        <p>Other Canadian routes sit outside Express Entry. We will map these with a regulated adviser
-                            once the service is ready.</p>
-                    </article>
+        <!-- ══════════════════════════════════════════════════════════════════
+             AUSTRALIA MIGRATION PAGE
+             ══════════════════════════════════════════════════════════════════ -->
+        <section id="australia" data-views="australia" style="display:none">
+            <div class="country-detail-container">
+                <!-- Navigation Breadcrumb -->
+                <div class="country-nav-bar">
+                    <a href="#migration" class="back-pill-btn">
+                        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+                        <span>All migration pages</span>
+                    </a>
+                    <span class="country-badge-pill">Australia Migration</span>
                 </div>
+
+                <!-- Page Header -->
+                <div class="country-page-header">
+                    <div class="section-eyebrow">
+                        <span>Migration Pathway</span>
+                        <span class="stars">★★★★</span>
+                    </div>
+                    <h1 class="country-page-title">Migrating to <span class="highlight-orange">Australia</span></h1>
+                    <p class="country-page-intro">Australia runs most skilled migration through an online expression of interest. This page lists the main pathways to explore and where to confirm the rules.</p>
+                </div>
+
+                <!-- Callout Notice -->
+                <div class="country-notice-banner">
+                    <div class="notice-badge-chip">
+                        <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+                        <span>General information only</span>
+                    </div>
+                    <p>This page is not immigration advice and Hikoshi does not offer migration services yet. Rules and fees change, so confirm each requirement with the official source below before you act.</p>
+                </div>
+
+                <!-- Main Pathways -->
+                <div class="country-section-block">
+                    <div class="country-block-head">
+                        <div class="section-eyebrow">
+                            <span>Main Pathways</span>
+                            <span class="stars">★★★★</span>
+                        </div>
+                        <h2>Main pathways to explore</h2>
+                        <p>Key visa subclasses and skilled routes available for permanent and regional residence.</p>
+                    </div>
+                    <div class="country-pathways-grid">
+                        <article class="pathway-detail-card">
+                            <div class="pathway-card-top">
+                                <span class="pathway-badge-num">01</span>
+                                <span class="pathway-card-country">Australia</span>
+                            </div>
+                            <h3>Skilled Independent (subclass 189)</h3>
+                            <p>A points-tested skilled visa. You submit an expression of interest first and must be invited to apply.</p>
+                        </article>
+
+                        <article class="pathway-detail-card">
+                            <div class="pathway-card-top">
+                                <span class="pathway-badge-num">02</span>
+                                <span class="pathway-card-country">Australia</span>
+                            </div>
+                            <h3>Skilled Nominated (subclass 190)</h3>
+                            <p>A points-tested skilled visa that needs nomination by a state or territory, after an expression of interest and an invitation.</p>
+                        </article>
+
+                        <article class="pathway-detail-card">
+                            <div class="pathway-card-top">
+                                <span class="pathway-badge-num">03</span>
+                                <span class="pathway-card-country">Australia</span>
+                            </div>
+                            <h3>Skilled Work Regional (subclass 491)</h3>
+                            <p>A provisional, points-tested skilled visa for people willing to live and work in a designated regional area.</p>
+                        </article>
+
+                        <article class="pathway-detail-card">
+                            <div class="pathway-card-top">
+                                <span class="pathway-badge-num">04</span>
+                                <span class="pathway-card-country">Australia</span>
+                            </div>
+                            <h3>Employer Nomination Scheme (subclass 186)</h3>
+                            <p>For skilled workers nominated by an Australian employer for a permanent visa. Occupation and employer conditions apply.</p>
+                        </article>
+
+                        <article class="pathway-detail-card">
+                            <div class="pathway-card-top">
+                                <span class="pathway-badge-num">05</span>
+                                <span class="pathway-card-country">Australia</span>
+                            </div>
+                            <h3>Study, work, visitor and family visas</h3>
+                            <p>Other visa types exist outside the skilled list. We will map these with a registered adviser once the service is ready.</p>
+                        </article>
+                    </div>
+                </div>
+
+                <h3 class="country-sub">What to start gathering</h3>
+                <ul class="country-list">
+                    <li>Passport and identity documents</li>
+                    <li>Education and qualification records</li>
+                    <li>Work history with dates, duties and references</li>
+                    <li>English test results, if relevant to your pathway</li>
+                    <li>Any skills assessment your occupation may need</li>
+                </ul>
+                <aside class="file-callout file-bar" data-tone="note"><span class="file-strong">Who can advise on Australia</span><span>The Australian Government says that anyone you appoint to give you immigration assistance, such as preparing a visa application, must be a registered migration agent, a legal practitioner or an exempt person. Hikoshi will not prepare Australian visa applications or give immigration assistance until a registered migration agent is engaged.</span></aside>
+                <h3 class="country-sub">Official sources</h3>
+                <ul class="country-list">
+                    <li><a class="file-link" href="https://immi.homeaffairs.gov.au/visas/working-in-australia/skillselect/overview" target="_blank" rel="noopener noreferrer">SkillSelect overview (Department of Home Affairs)</a></li>
+                    <li><a class="file-link" href="https://immi.homeaffairs.gov.au/visas/working-in-australia/skillselect/expression-of-interest" target="_blank" rel="noopener noreferrer">Expression of interest (Home Affairs)</a></li>
+                    <li><a class="file-link" href="https://www.smartmoveaustralia.gov.au/skilled-visas" target="_blank" rel="noopener noreferrer">Types of skilled visas (Smart Move Australia)</a></li>
+                    <li><a class="file-link" href="https://immi.homeaffairs.gov.au/help-support/who-can-help-with-your-application/overview" target="_blank" rel="noopener noreferrer">Who can help with your application (Home Affairs)</a></li>
+                    <li><a class="file-link" href="https://www.mara.gov.au/steps-to-register/overview" target="_blank" rel="noopener noreferrer">Registered migration agents (OMARA)</a></li>
+                </ul>
+                <p><a class="hero-cta" href="#enquiry">Start a free enquiry <span aria-hidden="true">↗</span></a></p>
+                <p class="small">Pre-launch preview. Enquiries are not connected to an inbox.</p>
+            </div>
+        </section>
+
+        <!-- ══════════════════════════════════════════════════════════════════
+             CANADA MIGRATION PAGE
+             ══════════════════════════════════════════════════════════════════ -->
+        <section id="canada" data-views="canada" style="display:none">
+            <div class="country-detail-container">
+                <!-- Navigation Breadcrumb -->
+                <div class="country-nav-bar">
+                    <a href="#migration" class="back-pill-btn">
+                        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+                        <span>All migration pages</span>
+                    </a>
+                    <span class="country-badge-pill">Canada Migration</span>
+                </div>
+
+                <!-- Page Header -->
+                <div class="country-page-header">
+                    <div class="section-eyebrow">
+                        <span>Migration Pathway</span>
+                        <span class="stars">★★★★</span>
+                    </div>
+                    <h1 class="country-page-title">Migrating to <span class="highlight-orange">Canada</span></h1>
+                    <p class="country-page-intro">Canada offers federal and provincial routes to permanent residence. This page lists the main ones to explore and where to confirm the rules.</p>
+                </div>
+
+                <!-- Callout Notice -->
+                <div class="country-notice-banner">
+                    <div class="notice-badge-chip">
+                        <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+                        <span>General information only</span>
+                    </div>
+                    <p>This page is not immigration advice and Hikoshi does not offer migration services yet. Rules and fees change, so confirm each requirement with the official source below before you act.</p>
+                </div>
+
+                <!-- Main Pathways -->
+                <div class="country-section-block">
+                    <div class="country-block-head">
+                        <div class="section-eyebrow">
+                            <span>Main Pathways</span>
+                            <span class="stars">★★★★</span>
+                        </div>
+                        <h2>Main pathways to explore</h2>
+                        <p>Key federal programs, provincial streams and qualified employment routes.</p>
+                    </div>
+                    <div class="country-pathways-grid">
+                        <article class="pathway-detail-card">
+                            <div class="pathway-card-top">
+                                <span class="pathway-badge-num">01</span>
+                                <span class="pathway-card-country">Canada</span>
+                            </div>
+                            <h3>Express Entry</h3>
+                            <p>An online system the government uses to manage skilled-worker applications. It covers three programs: Canadian Experience Class, Federal Skilled Worker and Federal Skilled Trades.</p>
+                        </article>
+
+                        <article class="pathway-detail-card">
+                            <div class="pathway-card-top">
+                                <span class="pathway-badge-num">02</span>
+                                <span class="pathway-card-country">Canada</span>
+                            </div>
+                            <h3>Canadian Experience Class</h3>
+                            <p>For skilled workers who already have eligible Canadian work experience.</p>
+                        </article>
+
+                        <article class="pathway-detail-card">
+                            <div class="pathway-card-top">
+                                <span class="pathway-badge-num">03</span>
+                                <span class="pathway-card-country">Canada</span>
+                            </div>
+                            <h3>Federal Skilled Worker and Federal Skilled Trades</h3>
+                            <p>For skilled workers with foreign or Canadian experience, and for people qualified in a skilled trade.</p>
+                        </article>
+
+                        <article class="pathway-detail-card">
+                            <div class="pathway-card-top">
+                                <span class="pathway-badge-num">04</span>
+                                <span class="pathway-card-country">Canada</span>
+                            </div>
+                            <h3>Provincial Nominee Program</h3>
+                            <p>Provinces and territories nominate people whose skills and experience suit their economy and who want to live there. Some streams link to Express Entry.</p>
+                        </article>
+
+                        <article class="pathway-detail-card">
+                            <div class="pathway-card-top">
+                                <span class="pathway-badge-num">05</span>
+                                <span class="pathway-card-country">Canada</span>
+                            </div>
+                            <h3>Work, study, family and visitor routes</h3>
+                            <p>Other Canadian routes sit outside Express Entry. We will map these with a regulated adviser once the service is ready.</p>
+                        </article>
+                    </div>
+                </div>
+
                 <h3 class="country-sub">What to start gathering</h3>
                 <ul class="country-list">
                     <li>Passport and identity documents</li>
@@ -676,75 +923,102 @@
                     <li>Language test results, if relevant to your pathway</li>
                     <li>Proof of funds or a job offer, if your pathway asks for it</li>
                 </ul>
-                <aside class="file-callout file-bar" data-tone="note"><span class="file-strong">Who can advise on
-                        Canada</span><span>The Government of Canada says people who represent immigrants or give them
-                        advice should be a member in good standing of the College of Immigration and Citizenship
-                        Consultants, a law society (lawyers and notaries), or the Law Society of Ontario (paralegals,
-                        Ontario only). Hikoshi will not represent applicants or give Canadian immigration advice until a
-                        licensed representative is engaged.</span></aside>
+                <aside class="file-callout file-bar" data-tone="note"><span class="file-strong">Who can advise on Canada</span><span>The Government of Canada says people who represent immigrants or give them advice should be a member in good standing of the College of Immigration and Citizenship Consultants, a law society (lawyers and notaries), or the Law Society of Ontario (paralegals, Ontario only). Hikoshi will not represent applicants or give Canadian immigration advice until a licensed representative is engaged.</span></aside>
                 <h3 class="country-sub">Official sources</h3>
                 <ul class="country-list">
-                    <li><a class="file-link"
-                            href="https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry.html"
-                            target="_blank" rel="noopener noreferrer">Express Entry (Government of Canada)</a></li>
-                    <li><a class="file-link"
-                            href="https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/who-can-apply.html"
-                            target="_blank" rel="noopener noreferrer">Express Entry: who can apply</a></li>
-                    <li><a class="file-link"
-                            href="https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/provincial-nominees.html"
-                            target="_blank" rel="noopener noreferrer">Provincial Nominee Program</a></li>
-                    <li><a class="file-link"
-                            href="https://www.canada.ca/en/immigration-refugees-citizenship/services/immigration-citizenship-representative/choose/authorized.html"
-                            target="_blank" rel="noopener noreferrer">Check that your representative is authorized</a>
-                    </li>
-                    <li><a class="file-link"
-                            href="https://college-ic.ca/protecting-the-public/find-an-immigration-consultant"
-                            target="_blank" rel="noopener noreferrer">Public register of consultants (CICC)</a></li>
+                    <li><a class="file-link" href="https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry.html" target="_blank" rel="noopener noreferrer">Express Entry (Government of Canada)</a></li>
+                    <li><a class="file-link" href="https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/who-can-apply.html" target="_blank" rel="noopener noreferrer">Express Entry: who can apply</a></li>
+                    <li><a class="file-link" href="https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/provincial-nominees.html" target="_blank" rel="noopener noreferrer">Provincial Nominee Program</a></li>
+                    <li><a class="file-link" href="https://www.canada.ca/en/immigration-refugees-citizenship/services/immigration-citizenship-representative/choose/authorized.html" target="_blank" rel="noopener noreferrer">Check that your representative is authorized</a></li>
+                    <li><a class="file-link" href="https://college-ic.ca/protecting-the-public/find-an-immigration-consultant" target="_blank" rel="noopener noreferrer">Public register of consultants (CICC)</a></li>
                 </ul>
                 <p><a class="hero-cta" href="#enquiry">Start a free enquiry <span aria-hidden="true">↗</span></a></p>
                 <p class="small">Pre-launch preview. Enquiries are not connected to an inbox.</p>
-            </section>
+            </div>
         </section>
+
+        <!-- ══════════════════════════════════════════════════════════════════
+             NEW ZEALAND MIGRATION PAGE
+             ══════════════════════════════════════════════════════════════════ -->
         <section id="new-zealand" data-views="new-zealand" style="display:none">
-            <section class="file-group" aria-labelledby=":R1q:">
-                <hgroup class="file-group-head">
-                    <p class="file-group-label">Migration</p>
-                    <h2 id=":R1q:" class="file-group-heading">Migrating to New Zealand</h2>
-                </hgroup>
-                <p class="small"><a href="#migration">← All migration pages</a></p>
-                <p class="section-intro">New Zealand uses invitation-based skilled residence alongside employer-linked
-                    work visas. This page lists the main routes to explore and where to confirm the rules.</p>
-                <aside class="file-callout file-bar" data-tone="note"><span class="file-strong">General information
-                        only</span><span>This page is not immigration advice and Hikoshi does not offer migration
-                        services yet. Rules and fees change, so confirm each requirement with the official source below
-                        before you act.</span></aside>
-                <h3 class="country-sub">Main pathways to explore</h3>
-                <div class="services-grid">
-                    <article class="service">
-                        <div class="service-top"><span>01</span><span>New Zealand</span></div>
-                        <h3>Skilled Migrant Category resident visa</h3>
-                        <p>You submit an expression of interest first. You can apply only after Immigration New Zealand
-                            approves it and invites you to apply.</p>
-                    </article>
-                    <article class="service">
-                        <div class="service-top"><span>02</span><span>New Zealand</span></div>
-                        <h3>Accredited Employer Work Visa</h3>
-                        <p>A work visa tied to an employer that holds accreditation. The employer and the job have to
-                            meet Immigration New Zealand&#x27;s checks.</p>
-                    </article>
-                    <article class="service">
-                        <div class="service-top"><span>03</span><span>New Zealand</span></div>
-                        <h3>Student and visitor visas</h3>
-                        <p>Study and short-stay routes are separate from work and residence. Conditions depend on the
-                            course or the visit.</p>
-                    </article>
-                    <article class="service">
-                        <div class="service-top"><span>04</span><span>New Zealand</span></div>
-                        <h3>Partner, child and other visas</h3>
-                        <p>Family-based and other visa types exist. We will map them with a licensed adviser once the
-                            service is ready.</p>
-                    </article>
+            <div class="country-detail-container">
+                <!-- Navigation Breadcrumb -->
+                <div class="country-nav-bar">
+                    <a href="#migration" class="back-pill-btn">
+                        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+                        <span>All migration pages</span>
+                    </a>
+                    <span class="country-badge-pill">New Zealand Migration</span>
                 </div>
+
+                <!-- Page Header -->
+                <div class="country-page-header">
+                    <div class="section-eyebrow">
+                        <span>Migration Pathway</span>
+                        <span class="stars">★★★★</span>
+                    </div>
+                    <h1 class="country-page-title">Migrating to <span class="highlight-orange">New Zealand</span></h1>
+                    <p class="country-page-intro">New Zealand uses invitation-based skilled residence alongside employer-linked work visas. This page lists the main routes to explore and where to confirm the rules.</p>
+                </div>
+
+                <!-- Callout Notice -->
+                <div class="country-notice-banner">
+                    <div class="notice-badge-chip">
+                        <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+                        <span>General information only</span>
+                    </div>
+                    <p>This page is not immigration advice and Hikoshi does not offer migration services yet. Rules and fees change, so confirm each requirement with the official source below before you act.</p>
+                </div>
+
+                <!-- Main Pathways -->
+                <div class="country-section-block">
+                    <div class="country-block-head">
+                        <div class="section-eyebrow">
+                            <span>Main Pathways</span>
+                            <span class="stars">★★★★</span>
+                        </div>
+                        <h2>Main pathways to explore</h2>
+                        <p>Skilled migrant categories, employer-linked accreditations and temporary permits.</p>
+                    </div>
+                    <div class="country-pathways-grid">
+                        <article class="pathway-detail-card">
+                            <div class="pathway-card-top">
+                                <span class="pathway-badge-num">01</span>
+                                <span class="pathway-card-country">New Zealand</span>
+                            </div>
+                            <h3>Skilled Migrant Category resident visa</h3>
+                            <p>You submit an expression of interest first. You can apply only after Immigration New Zealand approves it and invites you to apply.</p>
+                        </article>
+
+                        <article class="pathway-detail-card">
+                            <div class="pathway-card-top">
+                                <span class="pathway-badge-num">02</span>
+                                <span class="pathway-card-country">New Zealand</span>
+                            </div>
+                            <h3>Accredited Employer Work Visa</h3>
+                            <p>A work visa tied to an employer that holds accreditation. The employer and the job have to meet Immigration New Zealand's checks.</p>
+                        </article>
+
+                        <article class="pathway-detail-card">
+                            <div class="pathway-card-top">
+                                <span class="pathway-badge-num">03</span>
+                                <span class="pathway-card-country">New Zealand</span>
+                            </div>
+                            <h3>Student and visitor visas</h3>
+                            <p>Study and short-stay routes are separate from work and residence. Conditions depend on the course or the visit.</p>
+                        </article>
+
+                        <article class="pathway-detail-card">
+                            <div class="pathway-card-top">
+                                <span class="pathway-badge-num">04</span>
+                                <span class="pathway-card-country">New Zealand</span>
+                            </div>
+                            <h3>Partner, child and other visas</h3>
+                            <p>Family-based and other visa types exist. We will map them with a licensed adviser once the service is ready.</p>
+                        </article>
+                    </div>
+                </div>
+
                 <h3 class="country-sub">What to start gathering</h3>
                 <ul class="country-list">
                     <li>Passport and identity documents</li>
@@ -753,31 +1027,17 @@
                     <li>English test results, if relevant to your pathway</li>
                     <li>Health and character documents, which residence visas require</li>
                 </ul>
-                <aside class="file-callout file-bar" data-tone="note"><span class="file-strong">Who can advise on New
-                        Zealand</span><span>New Zealand&#x27;s Immigration Advisers Authority says immigration advice,
-                        including advising on visa options or how to complete an application form, can only be given by
-                        a licensed immigration adviser or an exempt person. Hikoshi will not give New Zealand
-                        immigration advice until a licensed adviser is engaged. This page is general information
-                        only.</span></aside>
+                <aside class="file-callout file-bar" data-tone="note"><span class="file-strong">Who can advise on New Zealand</span><span>New Zealand&#x27;s Immigration Advisers Authority says immigration advice, including advising on visa options or how to complete an application form, can only be given by a licensed immigration adviser or an exempt person. Hikoshi will not give New Zealand immigration advice until a licensed adviser is engaged. This page is general information only.</span></aside>
                 <h3 class="country-sub">Official sources</h3>
                 <ul class="country-list">
-                    <li><a class="file-link" href="https://www.immigration.govt.nz/formshelp/smc-rv-application"
-                            target="_blank" rel="noopener noreferrer">Skilled Migrant Category resident visa
-                            (Immigration New Zealand)</a></li>
-                    <li><a class="file-link" href="https://www.immigration.govt.nz/formshelp/skilled-migrant"
-                            target="_blank" rel="noopener noreferrer">Visa types (Immigration New Zealand)</a></li>
-                    <li><a class="file-link"
-                            href="https://legislation.govt.nz/act/public/2007/0015/latest/DLM407306.html"
-                            target="_blank" rel="noopener noreferrer">Immigration Advisers Licensing Act 2007, section
-                            6</a></li>
-                    <li><a class="file-link"
-                            href="https://www.iaa.govt.nz/about-us/news/supporting-the-construction-sector-to-get-the-right-immigration-advice/"
-                            target="_blank" rel="noopener noreferrer">Immigration Advisers Authority: who can give
-                            advice</a></li>
+                    <li><a class="file-link" href="https://www.immigration.govt.nz/formshelp/smc-rv-application" target="_blank" rel="noopener noreferrer">Skilled Migrant Category resident visa (Immigration New Zealand)</a></li>
+                    <li><a class="file-link" href="https://www.immigration.govt.nz/formshelp/skilled-migrant" target="_blank" rel="noopener noreferrer">Visa types (Immigration New Zealand)</a></li>
+                    <li><a class="file-link" href="https://legislation.govt.nz/act/public/2007/0015/latest/DLM407306.html" target="_blank" rel="noopener noreferrer">Immigration Advisers Licensing Act 2007, section 6</a></li>
+                    <li><a class="file-link" href="https://www.iaa.govt.nz/about-us/news/supporting-the-construction-sector-to-get-the-right-immigration-advice/" target="_blank" rel="noopener noreferrer">Immigration Advisers Authority: who can give advice</a></li>
                 </ul>
                 <p><a class="hero-cta" href="#enquiry">Start a free enquiry <span aria-hidden="true">↗</span></a></p>
                 <p class="small">Pre-launch preview. Enquiries are not connected to an inbox.</p>
-            </section>
+            </div>
         </section>
 
     </main>

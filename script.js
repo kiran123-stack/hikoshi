@@ -52,7 +52,7 @@
 // ── Smooth Scrolling Navigation ──
 (function() {
   var mainSections = document.querySelectorAll('[data-views*="home"]');
-  var subPages = document.querySelectorAll('#canada, #new-zealand');
+  var subPages = document.querySelectorAll('#canada, #new-zealand, #australia');
 
   function showMainPage() {
     mainSections.forEach(function(s) { s.style.display = ''; });
@@ -69,17 +69,13 @@
       return;
     }
 
-    if (targetId === 'canada' || targetId === 'new-zealand') {
+    if (targetId === 'canada' || targetId === 'new-zealand' || targetId === 'australia') {
       var subPage = document.getElementById(targetId);
       mainSections.forEach(function(s) { s.style.display = 'none'; });
       if (subPage) subPage.style.display = '';
       window.scrollTo({ top: 0, behavior: behavior });
       if (history.replaceState) history.replaceState(null, '', '#' + targetId);
       return;
-    }
-
-    if (targetId === 'australia') {
-      targetId = 'migration';
     }
 
     var targetEl = document.getElementById(targetId);
