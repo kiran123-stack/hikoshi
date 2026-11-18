@@ -78,6 +78,10 @@
       return;
     }
 
+    if (targetId === 'australia') {
+      targetId = 'migration';
+    }
+
     var targetEl = document.getElementById(targetId);
     if (targetEl) {
       showMainPage();
