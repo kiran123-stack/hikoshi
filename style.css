@@ -1,3 +1,16 @@
+
+/* ── Top Launch Bar (Luxury Forest Vibe) ── */
+.top-launch-bar {
+    background: var(--deep);
+    color: #f3dfb7;
+    text-align: center;
+    font-size: 11px;
+    letter-spacing: 0.16em;
+    padding: 10px 16px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
 /* ==========================================================================
    HIKOSHI GLOBAL - EDUACT STUDY ABROAD THEME (PIXEL-PERFECT VISUAL SYSTEM)
    ========================================================================== */
@@ -62,24 +75,35 @@
 
 /* ── EduAct Theme Design Tokens ── */
 :root {
-    /* Primary Brand Colors from Reference Image */
-    --theme-orange: #ff6b00;
-    --theme-orange-hover: #e55a00;
-    --theme-orange-light: #fff5ec;
-    --theme-blue: #2b3990;
-    --theme-blue-hover: #1e286d;
-    --theme-blue-light: #eef2ff;
-    --theme-cyan: #00b4d8;
-    --theme-dark: #141b34;
-    --theme-heading: #171d37;
-    --theme-body: #586174;
-    --theme-muted: #8b95a5;
-    --theme-bg-light: #f7f9fc;
-    --theme-white: #ffffff;
-    --theme-border: #e8ecf4;
-    --theme-shadow-sm: 0 4px 12px rgba(20, 27, 52, 0.05);
-    --theme-shadow-md: 0 10px 30px rgba(20, 27, 52, 0.08);
-    --theme-shadow-lg: 0 18px 45px rgba(20, 27, 52, 0.12);
+    /* ── Reference Palette from Hikkoshi Global ── */
+    --green: #003f2c;
+    --deep: #00291e;
+    --gold: #c99532;
+    --gold-hover: #e4b65e;
+    --gold-light: #f7f1e5;
+    --cream: #faf7f0;
+    --ink: #19372e;
+    --muted: #63766d;
+
+    /* ── Primary Luxury Forest & Gold Theme Tokens ── */
+    --theme-orange: #c99532;
+    --theme-orange-hover: #e4b65e;
+    --theme-orange-light: #f5eedf;
+    --theme-blue: #003f2c;
+    --theme-blue-hover: #00271c;
+    --theme-blue-light: #eef5f1;
+    --theme-cyan: #d9b36d;
+    --theme-dark: #00291e;
+    --theme-heading: #00291e;
+    --theme-body: #243d33;
+    --theme-muted: #63766d;
+    --theme-bg-light: #f3efe6;
+    --theme-white: #faf7f0;
+    --theme-card-bg: #ffffff;
+    --theme-border: #e6dfd2;
+    --theme-shadow-sm: 0 4px 14px rgba(0, 41, 30, 0.05);
+    --theme-shadow-md: 0 10px 30px rgba(0, 41, 30, 0.08);
+    --theme-shadow-lg: 0 18px 45px rgba(0, 41, 30, 0.12);
     
     /* Legacy design token mapping */
     --ds-ink: var(--theme-heading);
@@ -91,8 +115,8 @@
     --ds-teal: var(--theme-orange);
     
     /* Font families */
-    --font-heading: "Aime", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-    --font-body: "KMR Melange Grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    --font-heading: 'Playfair Display', "Aime", Georgia, serif;
+    --font-body: 'DM Sans', "KMR Melange Grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 
 /* ── Reset & Global ── */
@@ -149,7 +173,8 @@ img {
    ========================================================================== */
 .site-header {
     width: 100%;
-    background: var(--theme-white);
+    background: rgba(250, 247, 240, 0.96);
+    backdrop-filter: blur(16px);
     border-bottom: 1px solid var(--theme-border);
     position: sticky;
     top: 0;
@@ -183,7 +208,7 @@ img {
     align-items: center;
     justify-content: center;
     color: #fff;
-    box-shadow: 0 4px 10px rgba(255, 107, 0, 0.3);
+    box-shadow: 0 4px 10px rgba(201, 149, 50, 0.3);
 }
 
 .nav-logo-icon svg {
@@ -278,7 +303,7 @@ img {
     padding: 6px 18px 6px 6px;
     border-radius: 50px;
     text-decoration: none !important;
-    box-shadow: 0 4px 12px rgba(43, 57, 144, 0.25);
+    box-shadow: 0 4px 12px rgba(0, 63, 44, 0.25);
     transition: transform 0.2s, background 0.2s;
 }
 
@@ -338,14 +363,14 @@ img {
     padding: 10px 22px;
     border-radius: 50px;
     text-decoration: none !important;
-    box-shadow: 0 4px 14px rgba(255, 107, 0, 0.3);
+    box-shadow: 0 4px 14px rgba(201, 149, 50, 0.3);
     transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
 }
 
 .nav-cta:hover {
     background: var(--theme-orange-hover);
     transform: translateY(-1px);
-    box-shadow: 0 6px 18px rgba(255, 107, 0, 0.4);
+    box-shadow: 0 6px 18px rgba(201, 149, 50, 0.4);
 }
 
 /* Hamburger */
@@ -456,7 +481,7 @@ img {
     left: 0;
     width: 100%;
     height: 8px;
-    background: rgba(255, 107, 0, 0.2);
+    background: rgba(201, 149, 50, 0.2);
     border-radius: 4px;
     z-index: -1;
 }
@@ -489,14 +514,14 @@ img {
     font-weight: 700;
     padding: 14px 32px;
     border-radius: 50px;
-    box-shadow: 0 6px 18px rgba(255, 107, 0, 0.35);
+    box-shadow: 0 6px 18px rgba(201, 149, 50, 0.35);
     transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
 }
 
 .btn-primary-orange:hover {
     background: var(--theme-orange-hover);
     transform: translateY(-2px);
-    box-shadow: 0 8px 24px rgba(255, 107, 0, 0.45);
+    box-shadow: 0 8px 24px rgba(201, 149, 50, 0.45);
 }
 
 .btn-secondary-link {
@@ -569,9 +594,9 @@ img {
     height: 460px;
     border-radius: 220px 220px 40px 40px;
     overflow: hidden;
-    border: 8px solid #ffffff;
-    box-shadow: var(--theme-shadow-lg);
-    background: #eef2ff;
+    border: 5px solid var(--theme-orange);
+    box-shadow: 0 20px 45px rgba(0, 41, 30, 0.22);
+    background: #faf7f0;
 }
 
 .hero-photo-frame img {
@@ -711,8 +736,8 @@ img {
     display: flex;
     align-items: center;
     gap: 14px;
-    box-shadow: 0 10px 25px rgba(20, 27, 52, 0.1);
-    border: 1px solid rgba(232, 236, 244, 0.6);
+    box-shadow: 0 10px 25px rgba(0, 41, 30, 0.1);
+    border: 1px solid rgba(230, 223, 210, 0.6);
 }
 
 .award-icon-box {
@@ -795,7 +820,7 @@ img {
     align-items: center;
     gap: 18px;
     margin: 24px 0 28px;
-    box-shadow: 0 8px 20px rgba(255, 107, 0, 0.25);
+    box-shadow: 0 8px 20px rgba(201, 149, 50, 0.25);
 }
 
 .orange-box-icon {
@@ -890,7 +915,7 @@ img {
     font-weight: 700;
     padding: 14px 32px;
     border-radius: 50px;
-    box-shadow: 0 6px 18px rgba(43, 57, 144, 0.3);
+    box-shadow: 0 6px 18px rgba(0, 63, 44, 0.3);
     transition: background 0.2s, transform 0.2s;
 }
 
@@ -945,7 +970,7 @@ img {
     border-radius: 18px;
     padding: 0 24px 32px;
     box-shadow: var(--theme-shadow-md);
-    border: 1px solid rgba(232, 236, 244, 0.7);
+    border: 1px solid rgba(230, 223, 210, 0.7);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -957,19 +982,19 @@ img {
 .eduact-card:hover {
     transform: translateY(-8px);
     box-shadow: var(--theme-shadow-lg);
-    border-color: var(--theme-orange);
+    border-color: var(--theme-blue);
 }
 
-/* Special Highlight for Study Abroad (Core Focus requested by user) */
+/* Special Highlight for Study Abroad (Core Focus in Emerald Green) */
 .eduact-card.is-featured {
-    border: 2px solid var(--theme-orange);
-    box-shadow: 0 12px 35px rgba(255, 107, 0, 0.18);
+    border: 2px solid var(--theme-blue);
+    box-shadow: 0 12px 35px rgba(0, 63, 44, 0.18);
 }
 
 .featured-focus-badge {
     position: absolute;
     top: -12px;
-    background: var(--theme-orange);
+    background: var(--theme-blue);
     color: #ffffff;
     font-size: 11px;
     font-weight: 800;
@@ -977,21 +1002,21 @@ img {
     letter-spacing: 0.08em;
     padding: 4px 14px;
     border-radius: 50px;
-    box-shadow: 0 3px 8px rgba(255, 107, 0, 0.35);
+    box-shadow: 0 3px 8px rgba(0, 63, 44, 0.35);
 }
 
-/* Top Arched Orange Header (Distinctive EduAct shape) */
+/* Top Arched Emerald Green Header */
 .card-arch-top {
     width: 100px;
     height: 54px;
-    background: var(--theme-orange);
+    background: var(--theme-blue);
     border-radius: 0 0 50px 50px;
     display: flex;
     align-items: center;
     justify-content: center;
     color: #ffffff;
     margin-bottom: 28px;
-    box-shadow: 0 4px 12px rgba(255, 107, 0, 0.25);
+    box-shadow: 0 4px 12px rgba(0, 63, 44, 0.25);
 }
 
 .card-arch-top svg {
@@ -1032,14 +1057,15 @@ img {
     gap: 10px;
 }
 
-/* Bottom Orange Wave Band (as in reference image) */
+/* Bottom Forest Green Accent Band (Replaced Orange with Green) */
 .services-orange-band {
     position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
     height: 140px;
-    background: linear-gradient(135deg, var(--theme-orange) 0%, #ff8522 100%);
+    background: linear-gradient(135deg, #00291e 0%, #003f2c 100%);
+    border-top: 1px solid #315747;
     z-index: 1;
 }
 
@@ -1114,10 +1140,10 @@ img {
 
 .limits-highlight-card {
     background: linear-gradient(135deg, #f0f4ff 0%, #fff7f0 50%, #f4f6fc 100%);
-    border: 1.5px solid rgba(43, 57, 144, 0.16);
+    border: 1.5px solid rgba(0, 63, 44, 0.16);
     border-radius: 16px;
     padding: 24px 30px;
-    box-shadow: 0 4px 18px rgba(43, 57, 144, 0.05);
+    box-shadow: 0 4px 18px rgba(0, 63, 44, 0.05);
     color: var(--theme-body);
     position: relative;
     overflow: hidden;
@@ -1126,8 +1152,8 @@ img {
 
 .limits-highlight-card:hover {
     transform: translateY(-2px);
-    box-shadow: 0 8px 24px rgba(43, 57, 144, 0.09);
-    border-color: rgba(43, 57, 144, 0.28);
+    box-shadow: 0 8px 24px rgba(0, 63, 44, 0.09);
+    border-color: rgba(0, 63, 44, 0.28);
 }
 
 .limits-card-content {
@@ -1149,7 +1175,7 @@ img {
     text-transform: uppercase;
     letter-spacing: 0.08em;
     color: var(--theme-orange);
-    background: rgba(255, 107, 0, 0.1);
+    background: rgba(201, 149, 50, 0.1);
     padding: 4px 10px;
     border-radius: 20px;
 }
@@ -1297,7 +1323,7 @@ input, select, textarea {
 input:focus, select:focus, textarea:focus {
     outline: none;
     border-color: var(--theme-orange);
-    box-shadow: 0 0 0 3px rgba(255, 107, 0, 0.15);
+    box-shadow: 0 0 0 3px rgba(201, 149, 50, 0.15);
 }
 
 .btn-form-submit {
@@ -1313,7 +1339,7 @@ input:focus, select:focus, textarea:focus {
     border: none;
     border-radius: 50px;
     cursor: pointer;
-    box-shadow: 0 6px 18px rgba(255, 107, 0, 0.35);
+    box-shadow: 0 6px 18px rgba(201, 149, 50, 0.35);
     transition: background 0.2s, transform 0.2s;
 }
 
@@ -1335,43 +1361,84 @@ input:focus, select:focus, textarea:focus {
 /* ==========================================================================
    8. FOOTER
    ========================================================================== */
-.site-footer {
-    background: var(--theme-dark);
-    color: rgba(255, 255, 255, 0.7);
-    padding: 48px 0 32px;
-}
 
-.footer-content {
+/* ==========================================================================
+   FOOTER (Official Hikkoshi Global Forest & Gold Luxury System)
+   ========================================================================== */
+.site-footer {
+    background: #00291e;
+    color: #c9d6cd;
+    padding: 60px 24px 28px;
+    border-top: 1px solid #315747;
+    margin-top: 40px;
+}
+.site-footer .footer-inner {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 24px;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
+    gap: 40px;
     flex-wrap: wrap;
-    gap: 20px;
 }
-
-.footer-brand {
-    font-family: var(--font-heading);
-    font-size: 22px;
-    font-weight: 800;
-    color: #ffffff;
+.site-footer .footer-brand-col {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 420px;
 }
-
-.footer-brand span {
+.site-footer .footer-logo {
+    width: 210px;
+    height: auto;
+    max-height: 85px;
+    object-fit: contain;
+    display: block;
+}
+.site-footer .footer-brand-col p {
+    font-size: 13px;
+    line-height: 1.85;
+    color: #a8c0b2;
+    margin: 0;
+}
+.site-footer .footer-nav-links {
+    display: flex;
+    gap: 28px;
+    flex-wrap: wrap;
+    align-items: center;
+    padding-top: 14px;
+}
+.site-footer .footer-nav-links a {
+    color: #c9d6cd;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-decoration: none;
+    transition: color 0.25s ease;
+}
+.site-footer .footer-nav-links a:hover {
     color: var(--theme-orange);
 }
-
-.footer-disclaimer {
+.site-footer .footer-copyright {
     max-width: 1200px;
-    margin: 24px auto 0;
-    padding: 20px 24px 0;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin: 40px auto 0;
+    padding-top: 24px;
+    border-top: 1px solid #315747;
     font-size: 12px;
-    color: rgba(255, 255, 255, 0.45);
-    line-height: 1.6;
+    color: #8da497;
+    line-height: 1.7;
+    text-align: left;
 }
+@media (max-width: 768px) {
+    .site-footer .footer-inner {
+        flex-direction: column;
+        gap: 30px;
+    }
+    .site-footer .footer-nav-links {
+        padding-top: 0;
+        gap: 18px;
+    }
+}
+
 
 /* ==========================================================================
    9. RESPONSIVE BREAKPOINTS (Desktop, Tablet, Mobile)
@@ -1526,8 +1593,8 @@ input:focus, select:focus, textarea:focus {
     padding: 85px 0 95px;
     background: #fafbfe;
     position: relative;
-    border-top: 1px solid rgba(232, 236, 244, 0.6);
-    border-bottom: 1px solid rgba(232, 236, 244, 0.6);
+    border-top: 1px solid rgba(230, 223, 210, 0.6);
+    border-bottom: 1px solid rgba(230, 223, 210, 0.6);
 }
 
 .migration-overview-container {
@@ -1548,7 +1615,7 @@ input:focus, select:focus, textarea:focus {
     border-radius: 18px;
     padding: 0 26px 32px;
     box-shadow: var(--theme-shadow-md);
-    border: 1px solid rgba(232, 236, 244, 0.85);
+    border: 1px solid rgba(230, 223, 210, 0.85);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1574,7 +1641,7 @@ input:focus, select:focus, textarea:focus {
     justify-content: center;
     color: #ffffff;
     margin-bottom: 22px;
-    filter: drop-shadow(0 4px 10px rgba(255, 107, 0, 0.28));
+    filter: drop-shadow(0 4px 10px rgba(201, 149, 50, 0.28));
     transition: transform 0.25s ease, filter 0.25s ease;
 }
 
@@ -1605,8 +1672,8 @@ input:focus, select:focus, textarea:focus {
 }
 
 .migration-country-card:nth-child(1) .card-clippath-top {
-    background: linear-gradient(135deg, #ff6b00 0%, #ff8c33 100%);
-    filter: drop-shadow(0 4px 10px rgba(255, 107, 0, 0.3));
+    background: linear-gradient(135deg, #c99532 0%, #e4b65e 100%);
+    filter: drop-shadow(0 4px 10px rgba(201, 149, 50, 0.3));
 }
 .migration-country-card:nth-child(1) .migration-route-tag {
     color: var(--theme-orange);
@@ -1616,8 +1683,8 @@ input:focus, select:focus, textarea:focus {
 }
 
 .migration-country-card:nth-child(2) .card-clippath-top {
-    background: linear-gradient(135deg, #2b3990 0%, #3e4eb5 100%);
-    filter: drop-shadow(0 4px 10px rgba(43, 57, 144, 0.3));
+    background: linear-gradient(135deg, #003f2c 0%, #005a3e 100%);
+    filter: drop-shadow(0 4px 10px rgba(0, 63, 44, 0.3));
 }
 .migration-country-card:nth-child(2) .migration-route-tag {
     color: var(--theme-blue);
@@ -1627,14 +1694,14 @@ input:focus, select:focus, textarea:focus {
 }
 
 .migration-country-card:nth-child(3) .card-clippath-top {
-    background: linear-gradient(135deg, #0096c7 0%, #00b4d8 100%);
+    background: linear-gradient(135deg, #00291e 0%, #004b36 100%);
     filter: drop-shadow(0 4px 10px rgba(0, 180, 216, 0.3));
 }
 .migration-country-card:nth-child(3) .migration-route-tag {
     color: #0096c7;
 }
 .migration-country-card:nth-child(3):hover {
-    border-color: #00b4d8;
+    border-color: #c99532;
 }
 
 .migration-country-card h3 {
@@ -1657,7 +1724,7 @@ input:focus, select:focus, textarea:focus {
 .migration-card-footer {
     margin-top: auto;
     padding-top: 14px;
-    border-top: 1px solid rgba(232, 236, 244, 0.75);
+    border-top: 1px solid rgba(230, 223, 210, 0.75);
     width: 100%;
 }
 
@@ -1850,7 +1917,7 @@ input:focus, select:focus, textarea:focus {
     border-radius: 18px;
     padding: 26px 24px 28px;
     box-shadow: var(--theme-shadow-md);
-    border: 1px solid rgba(232, 236, 244, 0.85);
+    border: 1px solid rgba(230, 223, 210, 0.85);
     display: flex;
     flex-direction: column;
     position: relative;
@@ -1957,10 +2024,10 @@ input:focus, select:focus, textarea:focus {
 /* ── Legal / Compliance Advice Box ── */
 .country-compliance-card {
     background: linear-gradient(135deg, #ffffff 0%, #fffbf8 100%);
-    border: 1.5px solid rgba(255, 107, 0, 0.25);
+    border: 1.5px solid rgba(201, 149, 50, 0.25);
     border-radius: 18px;
     padding: 28px 32px;
-    box-shadow: 0 8px 25px rgba(255, 107, 0, 0.07);
+    box-shadow: 0 8px 25px rgba(201, 149, 50, 0.07);
     display: flex;
     gap: 20px;
     align-items: flex-start;
@@ -2075,7 +2142,7 @@ input:focus, select:focus, textarea:focus {
 
 /* ── Bottom Call To Action Banner ── */
 .country-bottom-cta {
-    background: linear-gradient(135deg, #171d37 0%, #2b3990 100%);
+    background: linear-gradient(135deg, #00291e 0%, #003f2c 100%);
     color: #ffffff;
     border-radius: 20px;
     padding: 44px 32px;
@@ -2360,7 +2427,7 @@ details {
 .faq details[open],
 details[open] {
     border-color: var(--theme-orange);
-    box-shadow: 0 4px 15px rgba(255, 107, 0, 0.08);
+    box-shadow: 0 4px 15px rgba(201, 149, 50, 0.08);
 }
 
 .faq summary,
@@ -2435,7 +2502,7 @@ form {
     margin: 40px auto;
     max-width: 980px;
     border: 1px solid #e9edf4;
-    box-shadow: 0 10px 40px rgba(20, 27, 52, 0.03);
+    box-shadow: 0 10px 40px rgba(0, 41, 30, 0.03);
     position: relative;
     overflow: hidden;
 }
@@ -2447,7 +2514,7 @@ form {
     right: -60px;
     width: 220px;
     height: 220px;
-    background: radial-gradient(circle, rgba(255, 107, 0, 0.08) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(201, 149, 50, 0.08) 0%, transparent 70%);
     border-radius: 50%;
     pointer-events: none;
 }
@@ -2459,7 +2526,7 @@ form {
     left: -60px;
     width: 200px;
     height: 200px;
-    background: radial-gradient(circle, rgba(43, 57, 144, 0.05) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(0, 63, 44, 0.05) 0%, transparent 70%);
     border-radius: 50%;
     pointer-events: none;
 }
@@ -2488,7 +2555,7 @@ form {
     text-transform: uppercase;
     letter-spacing: 0.06em;
     margin-bottom: 14px;
-    box-shadow: 0 2px 8px rgba(255, 107, 0, 0.12);
+    box-shadow: 0 2px 8px rgba(201, 149, 50, 0.12);
 }
 
 .faq-showcase-title {
@@ -2520,18 +2587,18 @@ form {
     border-radius: 16px;
     overflow: hidden;
     transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
-    box-shadow: 0 2px 8px rgba(20, 27, 52, 0.03);
+    box-shadow: 0 2px 8px rgba(0, 41, 30, 0.03);
 }
 
 .faq-card:hover {
-    border-color: rgba(255, 107, 0, 0.45);
-    box-shadow: 0 8px 24px rgba(255, 107, 0, 0.08);
+    border-color: rgba(201, 149, 50, 0.45);
+    box-shadow: 0 8px 24px rgba(201, 149, 50, 0.08);
     transform: translateY(-2px);
 }
 
 .faq-card[open] {
     border-color: var(--theme-orange);
-    box-shadow: 0 10px 30px rgba(255, 107, 0, 0.12);
+    box-shadow: 0 10px 30px rgba(201, 149, 50, 0.12);
     border-left: 5px solid var(--theme-orange);
 }
 
@@ -2581,7 +2648,7 @@ form {
 .faq-card[open] .faq-index-badge {
     background: var(--theme-orange);
     color: #ffffff;
-    box-shadow: 0 3px 10px rgba(255, 107, 0, 0.35);
+    box-shadow: 0 3px 10px rgba(201, 149, 50, 0.35);
     transform: none !important;
 }
 
@@ -2624,7 +2691,7 @@ form {
     background: var(--theme-orange);
     color: #ffffff;
     transform: rotate(45deg);
-    box-shadow: 0 4px 12px rgba(255, 107, 0, 0.3);
+    box-shadow: 0 4px 12px rgba(201, 149, 50, 0.3);
 }
 
 /* Answer Body */
@@ -2703,7 +2770,7 @@ form {
         font-size: 13px;
         font-weight: 700;
         text-decoration: none !important;
-        box-shadow: 0 3px 10px rgba(255, 107, 0, 0.3);
+        box-shadow: 0 3px 10px rgba(201, 149, 50, 0.3);
         transition: transform 0.2s, background 0.2s, box-shadow 0.2s;
         white-space: nowrap;
         margin-right: 8px;
@@ -2711,7 +2778,7 @@ form {
     .nav-cta-mobile-header:hover {
         background: var(--theme-orange-hover);
         transform: translateY(-1px);
-        box-shadow: 0 5px 14px rgba(255, 107, 0, 0.4);
+        box-shadow: 0 5px 14px rgba(201, 149, 50, 0.4);
     }
 }
 
@@ -2733,7 +2800,7 @@ form {
     background: #ffffff;
     border-radius: 28px;
     overflow: hidden;
-    box-shadow: 0 16px 50px rgba(20, 27, 52, 0.07);
+    box-shadow: 0 16px 50px rgba(0, 41, 30, 0.07);
     border: 1px solid #e5eaf2;
     padding: 0 !important;
     margin: 0 auto;
@@ -2741,7 +2808,7 @@ form {
 
 /* Left Visual Panel with 3D Spheres (Compact & Streamlined) */
 .enquiry-visual-panel {
-    background: linear-gradient(145deg, #ff6b00 0%, #ff8533 50%, #e65100 100%);
+    background: linear-gradient(145deg, #003f2c 0%, #00291e 100%); border: 1px solid #315747;
     position: relative;
     padding: 32px 28px;
     display: flex;
@@ -2758,7 +2825,7 @@ form {
     top: -30px;
     left: -30px;
     border-radius: 50%;
-    background: radial-gradient(circle at 35% 35%, #ffa64d 0%, #ff6b00 50%, #b33600 100%);
+    background: radial-gradient(circle at 35% 35%, #e8c77e 0%, #c99532 50%, #8e6216 100%);
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2), inset -8px -8px 20px rgba(0, 0, 0, 0.25), inset 12px 12px 20px rgba(255, 255, 255, 0.6);
     opacity: 0.85;
     pointer-events: none;
@@ -2955,7 +3022,7 @@ form {
 .form-pill-select:focus {
     background: #ffffff;
     border-color: var(--theme-orange);
-    box-shadow: 0 0 0 3.5px rgba(255, 107, 0, 0.12);
+    box-shadow: 0 0 0 3.5px rgba(201, 149, 50, 0.12);
 }
 
 .form-input-pill-wrap:focus-within .input-icon-chip {
@@ -2993,7 +3060,7 @@ form {
 .form-pill-textarea:focus {
     background: #ffffff;
     border-color: var(--theme-orange);
-    box-shadow: 0 0 0 3.5px rgba(255, 107, 0, 0.12);
+    box-shadow: 0 0 0 3.5px rgba(201, 149, 50, 0.12);
 }
 
 .form-submit-row {
@@ -3112,7 +3179,7 @@ form {
     width: 72px;
     height: 72px;
     border-radius: 50%;
-    background: linear-gradient(135deg, #ff6b00, #ff8533);
+    background: linear-gradient(135deg, #c99532, #e4b65e);
     color: #fff;
     font-size: 36px;
     font-weight: 900;
@@ -3120,7 +3187,7 @@ form {
     align-items: center;
     justify-content: center;
     margin: 0 auto 24px;
-    box-shadow: 0 8px 24px rgba(255, 107, 0, 0.35);
+    box-shadow: 0 8px 24px rgba(201, 149, 50, 0.35);
 }
 .form-submitted-state h3 {
     font-size: 24px;
@@ -3162,4 +3229,23 @@ html {
 
 section[id] {
     scroll-margin-top: 90px;
+}
+
+
+.site-logo-img {
+    height: 48px;
+    width: auto;
+    max-width: 170px;
+    object-fit: contain;
+    display: block;
+    transition: transform 0.25s ease;
+}
+.site-logo-img:hover {
+    transform: scale(1.02);
+}
+@media (max-width: 600px) {
+    .site-logo-img {
+        height: 38px;
+        max-width: 130px;
+    }
 }

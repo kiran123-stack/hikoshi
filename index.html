@@ -38,10 +38,16 @@
     }
     </script>
 
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+    <!-- Top Dubai Launch Announcement Bar -->
+    <div class="top-launch-bar">DUBAI LAUNCH PREVIEW · WHERE AMBITIONS CROSS BORDERS · WORK · MIGRATE · STUDY ABROAD · TRAVEL</div>
+
     <!-- ══════════════════════════════════════════════════════════════════════
          HEADER / NAVBAR (EduAct Style: Logo | Links | Phone Pill & CTA)
          ══════════════════════════════════════════════════════════════════════ -->
@@ -50,6 +56,7 @@
             <nav class="site-nav" aria-label="Main navigation">
                 <!-- Brand Logo -->
                 <a href="#home" class="nav-logo">
+                    <img src="logo.png" alt="Hikkoshi Global" class="site-logo-img">
                     <div class="nav-logo-text">
                         <span class="site-title">Hikoshi <span>Global</span></span>
                         <span class="site-fact">Preparing to launch in Dubai</span>
@@ -125,16 +132,16 @@
                     
                     <!-- Curly Arrow Doodle pointing to visual -->
                     <svg class="doodle-arrow" viewBox="0 0 85 45" fill="none">
-                        <path d="M5 25C25 5 55 5 75 35M75 35L62 34M75 35L76 22" stroke="#ff6b00" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M5 25C25 5 55 5 75 35M75 35L62 34M75 35L76 22" stroke="#c99532" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
                 </div>
 
                 <!-- Pencil Doodle -->
                 <div class="hero-doodle-row">
                     <svg class="doodle-pencil" viewBox="0 0 36 36" fill="none">
-                        <path d="M6 30L12 28L30 10L24 4L6 22L6 30Z" fill="#ff6b00" opacity="0.2"/>
-                        <path d="M24 4L30 10L12 28L6 30L6 24L24 4Z" stroke="#ff6b00" stroke-width="2.5" stroke-linejoin="round"/>
-                        <path d="M20 8L26 14" stroke="#ff6b00" stroke-width="2.5"/>
+                        <path d="M6 30L12 28L30 10L24 4L6 22L6 30Z" fill="#c99532" opacity="0.2"/>
+                        <path d="M24 4L30 10L12 28L6 30L6 24L24 4Z" stroke="#c99532" stroke-width="2.5" stroke-linejoin="round"/>
+                        <path d="M20 8L26 14" stroke="#c99532" stroke-width="2.5"/>
                     </svg>
                     <p class="small">Pre-launch website preview. Services are not open yet.</p>
                 </div>
@@ -144,12 +151,13 @@
             <div class="hero-art-container">
                 <!-- Blue Splash Backdrop -->
                 <svg class="hero-splash-bg" viewBox="0 0 450 450" fill="none">
-                    <path d="M85 160C40 230 20 310 90 370C160 430 290 440 370 380C450 320 440 180 390 100C340 20 220 5 150 40C100 65 110 120 85 160Z" fill="#2b3990" opacity="0.9"/>
+                    <path d="M85 160C40 230 20 310 90 370C160 430 290 440 370 380C450 320 440 180 390 100C340 20 220 5 150 40C100 65 110 120 85 160Z" fill="#003f2c" opacity="0.95"/>
                 </svg>
 
                 <!-- Arched Photo Frame -->
                 <div class="hero-photo-frame">
-                    <img src="student-hero.webp" alt="University student with headphones studying on laptop" width="800" height="900" loading="eager">
+                    <!-- <img src="student-hero.webp" alt="University student with headphones studying on laptop" width="800" height="900" loading="eager"> -->
+                    <img src="hero-banner.png" alt="Hikkoshi Global Luxury Emerald and Gold Artwork" width="800" height="900" loading="eager" class="hero-frame-img">
                 </div>
 
 
@@ -179,14 +187,15 @@
 
                     <!-- Secondary Circle: Student Group -->
                     <div class="collage-circle-secondary">
-                        <img src="student-hero.webp" alt="Students studying together" width="400" height="400" loading="lazy">
+                        <!-- <img src="student-hero.webp" alt="Students studying together" width="400" height="400" loading="lazy"> -->
+                        <img src="hero-banner.png" alt="Hikkoshi Global Luxury Artwork" width="400" height="400" loading="lazy">
                     </div>
 
                    
                     <!-- Paper Plane Doodle -->
                     <svg class="doodle-plane" viewBox="0 0 48 48" fill="none">
-                        <path d="M4 22L44 4L26 44L20 28L4 22Z" fill="#eef2ff" stroke="#2b3990" stroke-width="2" stroke-linejoin="round"/>
-                        <path d="M44 4L20 28" stroke="#2b3990" stroke-width="2"/>
+                        <path d="M4 22L44 4L26 44L20 28L4 22Z" fill="#eef5f1" stroke="#003f2c" stroke-width="2" stroke-linejoin="round"/>
+                        <path d="M44 4L20 28" stroke="#003f2c" stroke-width="2"/>
                     </svg>
                 </div>
 
@@ -613,7 +622,10 @@
                         <p class="form-subtitle-text" style="margin: 0;">Fill out the form below to send your enquiry directly to our inbox.</p>
                     </div>
 
-                    <form id="enquiry-form" action="https://formsubmit.co/ajax/kiranpar321@gmail.com" method="POST" class="modern-split-form">
+                    <form id="enquiry-form" action="https://formsubmit.co/kiranpar321@gmail.com" method="POST" class="modern-split-form">
+                        <!-- FormSubmit Configuration Inputs -->
+                        <input type="hidden" name="_subject" value="New Pre-Launch Enquiry | Hikoshi Global">
+                        <input type="hidden" name="_template" value="table">
                         <!-- FormSubmit Configuration Inputs -->
                         <input type="hidden" name="_captcha" value="false">
                         <input type="text" name="_honey" style="display:none">
@@ -1045,14 +1057,25 @@
     <!-- ══════════════════════════════════════════════════════════════════
          FOOTER
          ══════════════════════════════════════════════════════════════════ -->
+        <!-- ══════════════════════════════════════════════════════════════════════
+         FOOTER (Official Hikkoshi Global Forest & Gold Luxury System)
+         ══════════════════════════════════════════════════════════════════════ -->
     <footer class="site-footer">
-        <div class="footer-content">
-            <div class="footer-brand">Hikoshi <span>Global</span></div>
-            <div>Work · Migrate · Study Abroad · Travel</div>
-            <div>Pre-launch preview. Launching in Dubai.</div>
+        <div class="footer-inner">
+            <div class="footer-brand-col">
+                <img src="logo.png" alt="Hikkoshi Global logo" class="footer-logo">
+                <p>Where Ambitions Cross Borders.<br>Dubai, United Arab Emirates · Preparing to launch.</p>
+            </div>
+            <div class="footer-nav-links">
+                <a href="#home">Home</a>
+                <a href="#services">Services</a>
+                <a href="#migration">Migration</a>
+                <a href="#questions">FAQs</a>
+                <a href="#enquiry">Contact</a>
+            </div>
         </div>
-        <div class="footer-disclaimer">
-            Pre-launch design preview. No services, bookings or payments are available through this page. Conceptual artwork is illustrative. Official visa applications are processed exclusively via government immigration authorities.
+        <div class="footer-copyright">
+            © <span id="year">2026</span> Hikkoshi Global. Pre-launch website. No services, bookings or payments are available through this website.
         </div>
     </footer>
 
