@@ -1,0 +1,13 @@
+{
+  "name": "hikkoshi-global",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Hikkoshi Global website",
+  "scripts": {
+    "start": "npx serve .",
+    "build": "echo ok"
+  },
+  "dependencies": {
+    "serve": "^14.2.4"
+  }
+}
