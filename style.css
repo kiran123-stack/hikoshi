@@ -1405,6 +1405,18 @@ input:focus, select:focus, textarea:focus {
     color: #a8c0b2;
     margin: 0;
 }
+.site-footer .footer-email-link {
+    color: var(--theme-orange, #c99532);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s ease;
+    display: inline-block;
+    margin-top: 4px;
+}
+.site-footer .footer-email-link:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
 .site-footer .footer-nav-links {
     display: flex;
     gap: 28px;
