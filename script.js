@@ -109,30 +109,57 @@
   }
 })();
 
-// ── Demo Form Handler (pre-launch: form is NOT connected to any inbox) ──
+// ── AJAX Form Submission Handler (Sends enquiry to info@hikkoshiglobal.com) ──
 (function() {
     var form = document.getElementById('enquiry-form');
     var successMsg = document.getElementById('form-success-message');
 
     if (form) {
         form.addEventListener('submit', function(e) {
-            e.preventDefault(); // No data is sent anywhere
+            e.preventDefault();
 
-            // Show a demo acknowledgement on the page (nothing is transmitted)
-            var formPanel = document.querySelector('.enquiry-form-panel');
-            if (formPanel) {
-                formPanel.innerHTML = [
-                    '<div class="form-submitted-state">',
-                    '  <div class="submitted-icon">&#10003;</div>',
-                    '  <h3>Interest noted — pre-launch preview</h3>',
-                    '  <p>Thank you for filling in the form. This is a pre-launch preview and the inbox is not yet connected. <strong>Nothing you entered has been sent or saved.</strong> No place on a waiting list has been created.</p>',
-                    '  <p class="submitted-note">Once the inbox is confirmed, the form will be connected and this message will be updated.</p>',
-                    '</div>'
-                ].join('');
-            } else if (successMsg) {
-                form.reset();
-                successMsg.style.display = 'flex';
+            var submitBtn = form.querySelector('button[type="submit"]');
+            var originalBtnHtml = submitBtn ? submitBtn.innerHTML : '';
+            if (submitBtn) {
+                submitBtn.disabled = true;
+                submitBtn.innerHTML = '<span>Sending...</span>';
             }
+
+            var formData = new FormData(form);
+
+            fetch("https://formsubmit.co/ajax/info@hikkoshiglobal.com", {
+                method: "POST",
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            })
+            .then(function(response) { return response.json(); })
+            .then(function(data) {
+                if (data.success || data.message || data.status === 'success') {
+                    var formPanel = document.querySelector('.enquiry-form-panel');
+                    if (formPanel) {
+                        formPanel.innerHTML = [
+                            '<div class="form-submitted-state">',
+                            '  <div class="submitted-icon">&#10003;</div>',
+                            '  <h3>Your enquiry has been submitted!</h3>',
+                            '  <p>Thank you for reaching out. Our team will review your enquiry and get back to you shortly at the email address provided.</p>',
+                            '  <p class="submitted-note">You can also reach us directly at info@hikkoshiglobal.com or on WhatsApp.</p>',
+                            '</div>'
+                        ].join('');
+                    } else if (successMsg) {
+                        form.reset();
+                        successMsg.style.display = 'flex';
+                    }
+                } else {
+                    // Fallback to native form submission
+                    form.submit();
+                }
+            })
+            .catch(function(error) {
+                // If fetch fails (CORS or network), submit natively so enquiry is never lost
+                form.submit();
+            });
         });
     }
 })();
