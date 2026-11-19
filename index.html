@@ -41,6 +41,9 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+        <!-- Preload critical images for LCP performance -->
+    <link rel="preload" as="image" href="logo.webp" type="image/webp">
+    <link rel="preload" as="image" href="hero-banner.webp" type="image/webp">
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -56,7 +59,7 @@
             <nav class="site-nav" aria-label="Main navigation">
                 <!-- Brand Logo -->
                 <a href="#home" class="nav-logo">
-                    <img src="logo.png" alt="Hikkoshi Global" class="site-logo-img">
+                    <img src="logo.webp" alt="Hikkoshi Global" class="site-logo-img">
                     <div class="nav-logo-text">
                         <span class="site-title">Hikoshi <span>Global</span></span>
                         <span class="site-fact">Preparing to launch in Dubai</span>
@@ -157,7 +160,7 @@
                 <!-- Arched Photo Frame -->
                 <div class="hero-photo-frame">
                     <!-- <img src="student-hero.webp" alt="University student with headphones studying on laptop" width="800" height="900" loading="eager"> -->
-                    <img src="hero-banner.png" alt="Hikkoshi Global Luxury Emerald and Gold Artwork" width="800" height="900" loading="eager" class="hero-frame-img">
+                    <img src="hero-banner.webp" alt="Hikkoshi Global Luxury Emerald and Gold Artwork" width="800" height="900" loading="eager" fetchpriority="high" class="hero-frame-img">
                 </div>
 
 
@@ -188,7 +191,7 @@
                     <!-- Secondary Circle: Student Group -->
                     <div class="collage-circle-secondary">
                         <!-- <img src="student-hero.webp" alt="Students studying together" width="400" height="400" loading="lazy"> -->
-                        <img src="hero-banner.png" alt="Hikkoshi Global Luxury Artwork" width="400" height="400" loading="lazy">
+                        <img src="hero-banner.webp" alt="Hikkoshi Global Luxury Artwork" width="400" height="400" loading="lazy">
                     </div>
 
                    
@@ -1063,7 +1066,7 @@
     <footer class="site-footer">
         <div class="footer-inner">
             <div class="footer-brand-col">
-                <img src="logo.png" alt="Hikkoshi Global logo" class="footer-logo">
+                <img src="logo.webp" alt="Hikkoshi Global logo" class="footer-logo">
                 <p>Where Ambitions Cross Borders.<br>Dubai, United Arab Emirates · Preparing to launch.</p>
             </div>
             <div class="footer-nav-links">
