@@ -76,34 +76,34 @@
 /* ── EduAct Theme Design Tokens ── */
 :root {
     /* ── Reference Palette from Hikkoshi Global ── */
-    --green: #003f2c;
-    --deep: #00291e;
+    --green: #021d47;
+    --deep: #011432;
     --gold: #c99532;
     --gold-hover: #e4b65e;
     --gold-light: #f7f1e5;
     --cream: #faf7f0;
-    --ink: #19372e;
-    --muted: #63766d;
+    --ink: #0f2442;
+    --muted: #586c87;
 
     /* ── Primary Luxury Forest & Gold Theme Tokens ── */
     --theme-orange: #c99532;
     --theme-orange-hover: #e4b65e;
     --theme-orange-light: #f5eedf;
-    --theme-blue: #003f2c;
-    --theme-blue-hover: #00271c;
-    --theme-blue-light: #eef5f1;
+    --theme-blue: #021d47;
+    --theme-blue-hover: #011432;
+    --theme-blue-light: #edf2f9;
     --theme-cyan: #d9b36d;
-    --theme-dark: #00291e;
-    --theme-heading: #00291e;
-    --theme-body: #243d33;
-    --theme-muted: #63766d;
+    --theme-dark: #011432;
+    --theme-heading: #011432;
+    --theme-body: #1e334f;
+    --theme-muted: #586c87;
     --theme-bg-light: #f3efe6;
     --theme-white: #faf7f0;
     --theme-card-bg: #ffffff;
     --theme-border: #e6dfd2;
-    --theme-shadow-sm: 0 4px 14px rgba(0, 41, 30, 0.05);
-    --theme-shadow-md: 0 10px 30px rgba(0, 41, 30, 0.08);
-    --theme-shadow-lg: 0 18px 45px rgba(0, 41, 30, 0.12);
+    --theme-shadow-sm: 0 4px 14px rgba(1, 20, 50, 0.05);
+    --theme-shadow-md: 0 10px 30px rgba(1, 20, 50, 0.08);
+    --theme-shadow-lg: 0 18px 45px rgba(1, 20, 50, 0.12);
     
     /* Legacy design token mapping */
     --ds-ink: var(--theme-heading);
@@ -303,7 +303,7 @@ img {
     padding: 6px 18px 6px 6px;
     border-radius: 50px;
     text-decoration: none !important;
-    box-shadow: 0 4px 12px rgba(0, 63, 44, 0.25);
+    box-shadow: 0 4px 12px rgba(2, 29, 71, 0.25);
     transition: transform 0.2s, background 0.2s;
 }
 
@@ -597,7 +597,7 @@ img {
     border-radius: 220px 220px 40px 40px;
     overflow: hidden;
     border: 5px solid var(--theme-orange);
-    box-shadow: 0 20px 45px rgba(0, 41, 30, 0.22);
+    box-shadow: 0 20px 45px rgba(1, 20, 50, 0.22);
     background: #faf7f0;
 }
 
@@ -738,7 +738,7 @@ img {
     display: flex;
     align-items: center;
     gap: 14px;
-    box-shadow: 0 10px 25px rgba(0, 41, 30, 0.1);
+    box-shadow: 0 10px 25px rgba(1, 20, 50, 0.1);
     border: 1px solid rgba(230, 223, 210, 0.6);
 }
 
@@ -917,7 +917,7 @@ img {
     font-weight: 700;
     padding: 14px 32px;
     border-radius: 50px;
-    box-shadow: 0 6px 18px rgba(0, 63, 44, 0.3);
+    box-shadow: 0 6px 18px rgba(2, 29, 71, 0.3);
     transition: background 0.2s, transform 0.2s;
 }
 
@@ -990,7 +990,7 @@ img {
 /* Special Highlight for Study Abroad (Core Focus in Emerald Green) */
 .eduact-card.is-featured {
     border: 2px solid var(--theme-blue);
-    box-shadow: 0 12px 35px rgba(0, 63, 44, 0.18);
+    box-shadow: 0 12px 35px rgba(2, 29, 71, 0.18);
 }
 
 .featured-focus-badge {
@@ -1004,7 +1004,7 @@ img {
     letter-spacing: 0.08em;
     padding: 4px 14px;
     border-radius: 50px;
-    box-shadow: 0 3px 8px rgba(0, 63, 44, 0.35);
+    box-shadow: 0 3px 8px rgba(2, 29, 71, 0.35);
 }
 
 /* Top Arched Emerald Green Header */
@@ -1018,7 +1018,7 @@ img {
     justify-content: center;
     color: #ffffff;
     margin-bottom: 28px;
-    box-shadow: 0 4px 12px rgba(0, 63, 44, 0.25);
+    box-shadow: 0 4px 12px rgba(2, 29, 71, 0.25);
 }
 
 .card-arch-top svg {
@@ -1066,8 +1066,8 @@ img {
     left: 0;
     right: 0;
     height: 140px;
-    background: linear-gradient(135deg, #00291e 0%, #003f2c 100%);
-    border-top: 1px solid #315747;
+    background: linear-gradient(135deg, #011432 0%, #021d47 100%);
+    border-top: 1px solid #1a3d6d;
     z-index: 1;
 }
 
@@ -1142,10 +1142,10 @@ img {
 
 .limits-highlight-card {
     background: linear-gradient(135deg, #f0f4ff 0%, #fff7f0 50%, #f4f6fc 100%);
-    border: 1.5px solid rgba(0, 63, 44, 0.16);
+    border: 1.5px solid rgba(2, 29, 71, 0.16);
     border-radius: 16px;
     padding: 24px 30px;
-    box-shadow: 0 4px 18px rgba(0, 63, 44, 0.05);
+    box-shadow: 0 4px 18px rgba(2, 29, 71, 0.05);
     color: var(--theme-body);
     position: relative;
     overflow: hidden;
@@ -1154,8 +1154,8 @@ img {
 
 .limits-highlight-card:hover {
     transform: translateY(-2px);
-    box-shadow: 0 8px 24px rgba(0, 63, 44, 0.09);
-    border-color: rgba(0, 63, 44, 0.28);
+    box-shadow: 0 8px 24px rgba(2, 29, 71, 0.09);
+    border-color: rgba(2, 29, 71, 0.28);
 }
 
 .limits-card-content {
@@ -1368,10 +1368,10 @@ input:focus, select:focus, textarea:focus {
    FOOTER (Official Hikkoshi Global Forest & Gold Luxury System)
    ========================================================================== */
 .site-footer {
-    background: #00291e;
-    color: #c9d6cd;
+    background: #011432;
+    color: #c2d2e9;
     padding: 60px 24px 28px;
-    border-top: 1px solid #315747;
+    border-top: 1px solid #1a3d6d;
     margin-top: 40px;
 }
 .site-footer .footer-inner {
@@ -1402,7 +1402,7 @@ input:focus, select:focus, textarea:focus {
 .site-footer .footer-brand-col p {
     font-size: 13px;
     line-height: 1.85;
-    color: #a8c0b2;
+    color: #a3b8d4;
     margin: 0;
 }
 .site-footer .footer-email-link {
@@ -1425,7 +1425,7 @@ input:focus, select:focus, textarea:focus {
     padding-top: 14px;
 }
 .site-footer .footer-nav-links a {
-    color: #c9d6cd;
+    color: #c2d2e9;
     font-size: 13px;
     font-weight: 600;
     letter-spacing: 0.04em;
@@ -1439,7 +1439,7 @@ input:focus, select:focus, textarea:focus {
     max-width: 1200px;
     margin: 40px auto 0;
     padding-top: 24px;
-    border-top: 1px solid #315747;
+    border-top: 1px solid #1a3d6d;
     font-size: 12px;
     color: #8da497;
     line-height: 1.7;
@@ -1710,8 +1710,8 @@ input:focus, select:focus, textarea:focus {
 }
 
 .migration-country-card:nth-child(2) .card-clippath-top {
-    background: linear-gradient(135deg, #003f2c 0%, #005a3e 100%);
-    filter: drop-shadow(0 4px 10px rgba(0, 63, 44, 0.3));
+    background: linear-gradient(135deg, #021d47 0%, #0b3473 100%);
+    filter: drop-shadow(0 4px 10px rgba(2, 29, 71, 0.3));
 }
 .migration-country-card:nth-child(2) .migration-route-tag {
     color: var(--theme-blue);
@@ -1721,7 +1721,7 @@ input:focus, select:focus, textarea:focus {
 }
 
 .migration-country-card:nth-child(3) .card-clippath-top {
-    background: linear-gradient(135deg, #00291e 0%, #004b36 100%);
+    background: linear-gradient(135deg, #011432 0%, #07285c 100%);
     filter: drop-shadow(0 4px 10px rgba(0, 180, 216, 0.3));
 }
 .migration-country-card:nth-child(3) .migration-route-tag {
@@ -2169,7 +2169,7 @@ input:focus, select:focus, textarea:focus {
 
 /* ── Bottom Call To Action Banner ── */
 .country-bottom-cta {
-    background: linear-gradient(135deg, #00291e 0%, #003f2c 100%);
+    background: linear-gradient(135deg, #011432 0%, #021d47 100%);
     color: #ffffff;
     border-radius: 20px;
     padding: 44px 32px;
@@ -2529,7 +2529,7 @@ form {
     margin: 40px auto;
     max-width: 980px;
     border: 1px solid #e9edf4;
-    box-shadow: 0 10px 40px rgba(0, 41, 30, 0.03);
+    box-shadow: 0 10px 40px rgba(1, 20, 50, 0.03);
     position: relative;
     overflow: hidden;
 }
@@ -2553,7 +2553,7 @@ form {
     left: -60px;
     width: 200px;
     height: 200px;
-    background: radial-gradient(circle, rgba(0, 63, 44, 0.05) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(2, 29, 71, 0.05) 0%, transparent 70%);
     border-radius: 50%;
     pointer-events: none;
 }
@@ -2614,7 +2614,7 @@ form {
     border-radius: 16px;
     overflow: hidden;
     transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
-    box-shadow: 0 2px 8px rgba(0, 41, 30, 0.03);
+    box-shadow: 0 2px 8px rgba(1, 20, 50, 0.03);
 }
 
 .faq-card:hover {
@@ -2797,7 +2797,7 @@ form {
     background: #ffffff;
     border-radius: 28px;
     overflow: hidden;
-    box-shadow: 0 16px 50px rgba(0, 41, 30, 0.07);
+    box-shadow: 0 16px 50px rgba(1, 20, 50, 0.07);
     border: 1px solid #e5eaf2;
     padding: 0 !important;
     margin: 0 auto;
@@ -2805,7 +2805,7 @@ form {
 
 /* Left Visual Panel with 3D Spheres (Compact & Streamlined) */
 .enquiry-visual-panel {
-    background: linear-gradient(145deg, #003f2c 0%, #00291e 100%); border: 1px solid #315747;
+    background: linear-gradient(145deg, #021d47 0%, #011432 100%); border: 1px solid #1a3d6d;
     position: relative;
     padding: 32px 28px;
     display: flex;
