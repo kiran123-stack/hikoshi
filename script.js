@@ -109,58 +109,30 @@
   }
 })();
 
-// ── AJAX Form Submission Handler (Stays on page & sends data to email) ──
+// ── Demo Form Handler (pre-launch: form is NOT connected to any inbox) ──
 (function() {
     var form = document.getElementById('enquiry-form');
     var successMsg = document.getElementById('form-success-message');
 
     if (form) {
         form.addEventListener('submit', function(e) {
-            e.preventDefault(); // Prevents page reload or redirect
+            e.preventDefault(); // No data is sent anywhere
 
-            var submitBtn = form.querySelector('button[type="submit"]');
-            if (submitBtn) submitBtn.disabled = true;
-
-            var formData = new FormData(form);
-
-            fetch("https://formsubmit.co/ajax/kiranpar321@gmail.com", {
-                method: "POST",
-                body: formData,
-                headers: {
-                    'Accept': 'application/json'
-                }
-            })
-            .then(response => response.json())
-            .then(data => {
-                if (data.success) {
-                    // Replace entire form panel content with a full success state
-                    var formPanel = document.querySelector('.enquiry-form-panel');
-                    if (formPanel) {
-                        formPanel.innerHTML = [
-                            '<div class="form-submitted-state">',
-                            '  <div class="submitted-icon">&#10003;</div>',
-                            '  <h3>Your enquiry has been submitted!</h3>',
-                            '  <p>Thank you for reaching out. Our team will review your query and get back to you as soon as possible  typically within 24–48 hours.</p>',
-                            '  <p class="submitted-note">No uploads or payments are needed. We\'ll be in touch via the email address you provided.</p>',
-                            '</div>'
-                        ].join('');
-                    } else {
-                        // Fallback: just show success banner
-                        form.reset();
-                        if (successMsg) successMsg.style.display = 'block';
-                    }
-                } else {
-                    if (submitBtn) submitBtn.disabled = false;
-                    alert('Something went wrong. Please try again.');
-                }
-            })
-            .catch(function(error) {
-                if (submitBtn) submitBtn.disabled = false;
-                alert('Network error. Please check your connection.');
-            })
-            .finally(() => {
-                if (submitBtn) submitBtn.disabled = false;
-            });
+            // Show a demo acknowledgement on the page (nothing is transmitted)
+            var formPanel = document.querySelector('.enquiry-form-panel');
+            if (formPanel) {
+                formPanel.innerHTML = [
+                    '<div class="form-submitted-state">',
+                    '  <div class="submitted-icon">&#10003;</div>',
+                    '  <h3>Interest noted — pre-launch preview</h3>',
+                    '  <p>Thank you for filling in the form. This is a pre-launch preview and the inbox is not yet connected. <strong>Nothing you entered has been sent or saved.</strong> No place on a waiting list has been created.</p>',
+                    '  <p class="submitted-note">Once the inbox is confirmed, the form will be connected and this message will be updated.</p>',
+                    '</div>'
+                ].join('');
+            } else if (successMsg) {
+                form.reset();
+                successMsg.style.display = 'flex';
+            }
         });
     }
 })();
